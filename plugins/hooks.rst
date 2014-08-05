@@ -155,6 +155,13 @@ Set the post-registration destination, or do post-register tasks here.
 ^^^^^^^^^^^^^^^^^^^^^
 
 
+``filter:templates.get_virtual``
+^^^^^^^^^^^^^^^^^^^^^
+Allows you to modify the `api/get_templates_listing` API call, allowing ajaxification to custom templates that are not served physically via the ``templates` parameter in ``plugin.json``
+
+``filter:templates.get_config``
+^^^^^^^^^^^^^^^^^^^^^
+Allows you to add custom ajaxification rules in the `api/get_templates_listing` API call. See https://github.com/NodeBB/nodebb-theme-vanilla/blob/master/templates/config.json for more details
 
 Actions
 ----------

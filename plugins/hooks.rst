@@ -323,5 +323,14 @@ Client Side Hooks
 ``action:composer.loaded``
 ^^^^^^^^^^^^^^^^^^^
 
+``action:composer.topics.post``
+^^^^^^^^^^^^^^^^^^^
+
+``action:composer.posts.reply``
+^^^^^^^^^^^^^^^^^^^
+
+``action:composer.posts.edit``
+^^^^^^^^^^^^^^^^^^^
+
 ``action:widgets.loaded``
 ^^^^^^^^^^^^^^^^^^^

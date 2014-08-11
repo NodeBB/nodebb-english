@@ -13,11 +13,13 @@ The following are step-by-step guides to help you get up and running.
     :hidden:
     :maxdepth: 0
 
+    Arch Linux <os/arch>
     Ubuntu <os/ubuntu>
     Debian <os/debian>
     SmartOS <os/smartos>
     Windows <os/windows8>
 
+* :doc:`Arch Linux <os/arch>`
 * :doc:`Ubuntu <os/ubuntu>`
 * :doc:`Debian <os/debian>`
 * :doc:`SmartOS <os/smartos>`

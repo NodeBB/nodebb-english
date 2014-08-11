@@ -1,8 +1,8 @@
 
-Arch
+Arch Linux
 --------------------
 
-First, we install our base software stack:
+First, we install our base software stack.  Be sure to `pacman -Syu` first to make sure you've synced with the repositories and all other packages are up to date.
 
 .. code:: bash
 

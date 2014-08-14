@@ -255,10 +255,11 @@ Executed whenever a notification is pushed to a user.
 ``action:topic.save``
 ^^^^^^^^^^^^^^^^^^^^^
 
-``action:user.create``
-^^^^^^^^^^^^^^^^^^^^^
 
 ``action:topic.delete``
+^^^^^^^^^^^^^^^^^^^^^
+
+``action:user.create``
 ^^^^^^^^^^^^^^^^^^^^^
 
 ``action:user.verify``
@@ -266,6 +267,13 @@ Executed whenever a notification is pushed to a user.
 Parameters: uid; a hash of confirmation data (ex. confirm_link, confirm_code)
 Useful for overriding the verification system. Currently if this hook is set, the email verification system is disabled outright.
 
+``action:user.follow``
+^^^^^^^^^^^^^^^^^^^^^
+Parameters: fromUid, toUid
+
+``action:user.unfollow
+^^^^^^^^^^^^^^^^^^^^^
+Parameters: fromUid, toUid
 
 ``action:user.set``
 ^^^^^^^^^^^^^^^^^^^^^

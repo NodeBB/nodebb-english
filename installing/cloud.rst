@@ -23,3 +23,4 @@ The following are step-by-step guides to help you get up and running on the clou
 * :doc:`Nitrous.IO <cloud/nitrous>`
 * :doc:`Openshift <cloud/openshift>`
 * `Digital Ocean <http://burnaftercompiling.com/nodebb/setting-up-a-nodebb-forum-for-dummies/>`_ (external)
+* :doc:`Koding.com <cloud/koding>`

@@ -21,7 +21,7 @@ Heroku
     * The port is ``12345``
     * The password is ``h28h3wgh37fns7``
 
-12. Add the following two packages to the ``dependencies`` section of your ``package.json``:
+12. Add the following three packages to the ``dependencies`` section of your ``package.json``:
 
 .. code:: json
 
@@ -33,7 +33,7 @@ Heroku
         },
         "devDependencies": {
 
-13. Create a Procfile for Heroku: ``echo "web: node app.js" > Procfile``
+13. Create a Procfile for Heroku: ``echo "web: node loader.js" > Procfile``
 14. Commit the Procfile:
 
 .. code:: bash

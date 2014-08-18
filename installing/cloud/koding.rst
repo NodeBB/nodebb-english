@@ -10,7 +10,7 @@ Koding
 5. You should now be inside a terminal window. The installation instructions are close to Ubuntu's, but vary slightly, as certain packages are already installed.
 6. Firstly, we need to make sure we're up to date - ``sudo apt-get update && sudo apt-get upgrade``
 7. Enter your password you used to sign up, if you signed up using Github or another 3rd party, you will need to set one in your Account Settings. Then come back.
-8. Now run the following ```sudo apt-get install python-software-properties python g++ make``
+8. Now run the following ``sudo apt-get install python-software-properties python g++ make``
 9. Now we install NodeBBs other dependencies - ``sudo apt-get install redis-server imagemagick``
 10. Next, we clone NodeBB into a NodeBB folder - ``git clone git://github.com/NodeBB/NodeBB.git nodebb`` (Optional: Replace nodebb at the end if you want the folder to be a different name)
 11. Now enter the NodeBB folder - ``cd nodebb`` (unless you changed the foldername in the previous step, if you somehow forgot what you called it, run ``ls`` to see the name of the folder)

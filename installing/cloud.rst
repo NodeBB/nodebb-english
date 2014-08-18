@@ -17,6 +17,7 @@ The following are step-by-step guides to help you get up and running on the clou
     Heroku <cloud/heroku>
     Nitrous.IO <cloud/nitrous>
     Openshift <cloud/openshift>
+    Koding <cloud/koding>
 
 * :doc:`Cloud9 <cloud/cloud9>`
 * :doc:`Heroku <cloud/heroku>`

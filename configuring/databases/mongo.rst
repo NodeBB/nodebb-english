@@ -125,7 +125,7 @@ To start the app, run:
 
 .. code::
 
-    $ node app
+    $ ./nodebb start
 
 Now visit ``yourdomainorip.com:4567`` and your NodeBB installation should be running.
 

@@ -71,14 +71,7 @@ For MongoDB 2.6.x
 
     > db.createUser( { user: "nodebb", pwd: "<Enter in a secure password>", roles: [ "readWrite" ] } )
     
-For MongoDB 2.4.x
-
-.. code::
-
-    > db.addUser( { user: "nodebb", pwd: "<Enter in a secure password>", roles: [ "readWrite" ] } )
-
-
-**Note:** The role ``readWrite`` provides read or write any collection within a specific database to user.
+**Note**: NodeBB requires MongoDB 2.6.0 or higher. The role ``readWrite`` provides read or write any collection within a specific database to user.
 
 Step 7: Configure MongoDB
 -------------------------

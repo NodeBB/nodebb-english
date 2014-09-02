@@ -206,6 +206,13 @@ Executed whenever a plugin is deactivated via the admin panel.
 
 Executed whenever a post is created or edited, after it is saved into the database.
 
+``action:post.upvote``
+^^^^^^^^^^^^^^^^^^^^^
+
+**Argument(s)**: pid, uid
+
+Executed whenever a post is upvoted. ``uid`` is the user that has triggered the upvote.
+
 ``action:email.send``
 ^^^^^^^^^^^^^^^^^^^^^
 

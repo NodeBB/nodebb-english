@@ -213,6 +213,13 @@ Executed whenever a post is created or edited, after it is saved into the databa
 
 Executed whenever a post is upvoted. ``uid`` is the user that has triggered the upvote.
 
+``action:post.downvote``
+^^^^^^^^^^^^^^^^^^^^^
+
+**Argument(s)**: pid, uid
+
+Executed whenever a post is downvoted. ``uid`` is the user that has triggered the downvote.
+
 ``action:email.send``
 ^^^^^^^^^^^^^^^^^^^^^
 

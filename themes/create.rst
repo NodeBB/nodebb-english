@@ -1,7 +1,7 @@
 Creating a new NodeBB Theme
 ===========================
 
-NodeBB is built on `Twitter Bootstrap <twitter.github.com/bootstrap/>`_, which makes theming incredibly simple.
+NodeBB is built on `Twitter Bootstrap <http://twitter.github.com/bootstrap/>`_, which makes theming incredibly simple.
 
 Packaging for NodeBB
 -------------------------------------

@@ -31,6 +31,7 @@ The theme configuration file is a simple JSON string containing all appropriate 
 * ``description``: A one/two line description about the theme (e.g. "This is the theme I made for my personal NodeBB")
 * ``screenshot``: A filename (in the same folder) that is a preview image (ideally, 370x250, or an aspect ratio of 1.48:1)
 * ``url``: A fully qualified URL linking back to the theme's homepage/project
+* ``templates``: (Optional) A system path (relative to your plugin's root directory) to the folder containing template files. If not specified, NodeBB will search for the "templates" directory, and then simply fall back to using vanilla's template files.
 
 Child Themes
 -------------------------------------

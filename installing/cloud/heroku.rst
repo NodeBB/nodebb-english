@@ -6,7 +6,7 @@ Heroku
 1. Download and install `Heroku Toolbelt <https://toolbelt.heroku.com/>`_ for your operating system
 2. Log into your Heroku account: ``heroku login``
 3. Verify your Heroku account by adding a credit card (at http://heroku.com/verify)
-4. Clone the repository: ``git clone https://github.com/NodeBB/NodeBB.git /path/to/repo/clone``
+4. Clone the repository: ``git clone -b v0.5.x https://github.com/NodeBB/NodeBB.git /path/to/repo/clone``
 5. ``cd /path/to/repo/clone``
 6. Install dependencies locally ``npm install``
 7. Create the heroku app: ``heroku create``

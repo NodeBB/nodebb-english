@@ -139,7 +139,7 @@ Next clone this repository :
 .. code:: bash
 
 	$ cd /path/to/nodebb/install/location
-	$ git clone git://github.com/NodeBB/NodeBB.git nodebb
+	$ git clone -b v0.5.x https://github.com/NodeBB/NodeBB.git nodebb
 
 Now we are going to install all dependencies for NodeBB via NPM :
 

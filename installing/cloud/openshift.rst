@@ -34,13 +34,13 @@ The ouput of the echo $REDIS_CLI like this : -h ip_redis -p port_redis -a passwo
 
 .. code:: bash
 	
-	cd nodebb && git remote add upstream -m master git://github.com/NodeBB/NodeBB.git
+	cd nodebb && git remote add upstream -m master https://github.com/NodeBB/NodeBB.git
 
 **Step 7:** Get the files and push
 
 .. code:: bash
 	
-	git pull -s recursive -X theirs upstream master && git push
+	git pull -s recursive -X theirs upstream v0.5.x && git push
 	
 **Step 8:** Stop the application
 

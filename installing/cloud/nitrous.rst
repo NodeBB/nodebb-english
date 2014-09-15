@@ -13,7 +13,7 @@ https://www.nitrous.io/app#/boxes/new
 
 .. code:: bash
 	
-	wget https://github.com/NodeBB/NodeBB/archive/master.zip && unzip master.zip && rm master.zip && cd NodeBB-master
+	wget https://github.com/NodeBB/NodeBB/archive/v0.5.x.zip && unzip NodeBB-v0.5.x.zip && rm NodeBB-v0.5.x.zip && cd NodeBB-v0.5.x
 	
 **Step 4:** NPM Install
 
@@ -35,7 +35,7 @@ https://www.nitrous.io/app#/boxes/new
 
 Leave everything as default but you can change yourself.
 
-I recommand the port number to bind : 8080
+I recommend the port number to bind : 8080
 
 **Step 14:** And the last one, start NodeBB
 

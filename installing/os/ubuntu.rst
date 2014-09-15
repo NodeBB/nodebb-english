@@ -19,13 +19,15 @@ If you want to use MongoDB, LevelDB, or another database instead of Redis please
 	$ sudo add-apt-repository ppa:chris-lea/node.js
 	$ sudo apt-get update && sudo apt-get dist-upgrade
 
+If you'd like to install Node.js v0.11, use the repository url ``ppa:chris-lea/node.js-devel`` instead.
+
 
 Next, clone this repository:
 
 
 .. code:: bash
 
-	$ git clone git://github.com/NodeBB/NodeBB.git nodebb
+	$ git clone -b v0.5.x https://github.com/NodeBB/NodeBB.git nodebb
 
 
 Obtain all of the dependencies required by NodeBB:
@@ -54,4 +56,4 @@ Lastly, we run the forum.
 	$ ./nodebb start
 
 
-NodeBB can also be started with helper programs, such as ``supervisor`` and ``forever``. :doc:`Take a look at the options here <../../running/index>`.
+NodeBB can also be started with helper programs, such as ``forever``. :doc:`Take a look at the options here <../../running/index>`.

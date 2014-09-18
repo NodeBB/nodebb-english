@@ -173,10 +173,10 @@ Allows you to modify the `api/get_templates_listing` API call, allowing ajaxific
 
 Allows you to add custom ajaxification rules in the `api/get_templates_listing` API call. See https://github.com/NodeBB/nodebb-theme-vanilla/blob/master/templates/config.json for more details
 
-``filter:sockets.sendNewPostsToUids``
+``filter:sockets.sendNewPostToUids``
 ^^^^^^^^^^^^^^^^^^^^^
 
-An object consisting of a `uidsTo` array and a `uidFrom` integer. Useful for modifying who gets notifications of new posts (ex: ignore lists, etc).
+An object consisting of a `uidsTo` array, a `uidFrom` integer, and a `type` ("newPost" or "newTopic". Useful for modifying who gets notifications of new posts (ex: ignore lists, etc).
 
 Actions
 ----------

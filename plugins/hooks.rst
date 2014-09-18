@@ -58,6 +58,10 @@ Executed when a post or signature needs to be parsed from raw text to HTML (for 
 
 **Allows plugins to add custom profile information in the topic view's author post block**
 
+``filter:posts.modifyUserInfo``
+^^^^^^^^^^^^^^^^^^^^^
+
+This is the user object found in any post array. It's a smaller subset of the full list of user data to save on bandwidth, so if you've added custom fields in via ``user.setUserField``, add it here.
 
 ``filter:register.check``
 ^^^^^^^^^^^^^^^^^^^^^

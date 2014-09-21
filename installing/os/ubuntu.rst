@@ -6,7 +6,7 @@ First, we install our base software stack:
 
 .. code:: bash
 
-	$ sudo apt-get install git nodejs redis-server imagemagick npm
+	$ sudo apt-get install git nodejs redis-server imagemagick
 
 
 If you want to use MongoDB, LevelDB, or another database instead of Redis please look at the :doc:`Configuring Databases <../../configuring/databases>` section.
@@ -20,7 +20,7 @@ If you want to use MongoDB, LevelDB, or another database instead of Redis please
 	$ sudo apt-get update && sudo apt-get dist-upgrade
 
 If you'd like to install Node.js v0.11, use the repository url ``ppa:chris-lea/node.js-devel`` instead.
-
+The npm is installed with the nodejs
 
 Next, clone this repository:
 

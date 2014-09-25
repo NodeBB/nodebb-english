@@ -8,11 +8,10 @@ Heroku
 3. Verify your Heroku account by adding a credit card (at http://heroku.com/verify)
 4. Clone the repository: ``git clone -b v0.5.x https://github.com/NodeBB/NodeBB.git /path/to/repo/clone``
 5. ``cd /path/to/repo/clone``
-6. Install dependencies locally ``npm install``
+6. Install dependencies locally ``npm install --production``
 7. Create the heroku app: ``heroku create``
-8. Enable WebSocket support (beta): ``heroku labs:enable websockets -a {APP_NAME}``, where ``{APP_NAME}`` is provided by Heroku, and looks something like ``adjective-noun-wxyz.herokuapp.com`` (NOTE: `See this doc <https://discussion.heroku.com/t/application-error/160>`_): drop the `.herokuapp.com` when entering ``{APP_NAME}`` above.
-9. Enable `Redis To Go <https://addons.heroku.com/redistogo>`_ for your heroku account: ``heroku addons:add redistogo:nano``
-10. Run the NodeBB setup script: ``node app --setup`` (information for your Heroku server and Redis to Go instance can be found in your account page)
+8. Enable `Redis To Go <https://addons.heroku.com/redistogo>`_ for your heroku account: ``heroku addons:add redistogo:nano``
+9. Run the NodeBB setup script: ``node app --setup`` (information for your Heroku server and Redis to Go instance can be found in your account page)
 
     * Your server name is found in your Heroku app's "settings" page, and looks something like ``adjective-noun-wxyz.herokuapp.com``
     * Use any port number. It will be ignored.
@@ -21,7 +20,7 @@ Heroku
     * The port is ``12345``
     * The password is ``h28h3wgh37fns7``
 
-12. Add the following three packages to the ``dependencies`` section of your ``package.json``:
+10. Add the following three packages to the ``dependencies`` section of your ``package.json``:
 
 .. code:: json
 
@@ -33,17 +32,17 @@ Heroku
         },
         "devDependencies": {
 
-13. Create a Procfile for Heroku: ``echo "web: node loader.js" > Procfile``
-14. Commit the Procfile:
+11. Create a Procfile for Heroku: ``echo "web: node loader.js --no-daemon" > Procfile``
+12. Commit the Procfile:
 
 .. code:: bash
 
-	git add -f Procfile config.json package.json && git commit -am "adding Procfile and configs for Heroku"
+	git rm npm-shrinkwrap.json && git add -f Procfile config.json package.json && git commit -am "adding Procfile and configs for Heroku"
 
-15. Push to heroku: ``git push heroku master``
+13. Push to heroku: ``git push -u heroku v0.5.x:master``
     * Ensure that a proper SSH key was added to your account, otherwise the push will not succeed!
-16. Initialise a single dyno: ``heroku ps:scale web=1``
-17. Visit your app!
+14. Initialise a single dyno: ``heroku ps:scale web=1``
+15. Visit your app!
 
 If these instructions are unclear or if you run into trouble, please let us know by `filing an issue <https://github.com/NodeBB/NodeBB/issues>`_.
 
@@ -57,4 +56,4 @@ If you wish to pull the latest changes from the git repository to your Heroku ap
 3. ``npm install``
 4. ``node app --upgrade``
 5. ``git commit -am "upgrading to latest nodebb"``
-6. ``git push heroku master``
+6. ``git push``

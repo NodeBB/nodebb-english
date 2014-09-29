@@ -24,4 +24,5 @@ The following are step-by-step guides to help you get up and running.
 * :doc:`Debian <os/debian>`
 * :doc:`SmartOS <os/smartos>`
 * :doc:`Windows <os/windows8>`
+* :doc:`Mac <os/osx-mavericks>`
 * `CentOS <https://blog.tommyparnell.com/installing-nodebb-on-centos-6-5/>`_ (external)

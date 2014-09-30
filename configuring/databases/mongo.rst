@@ -123,3 +123,12 @@ To start the app, run:
 Now visit ``yourdomainorip.com:4567`` and your NodeBB installation should be running.
 
 NodeBB can also be started with helper programs, such as :doc:`supervisor or forever <../../running/index>`. You can also use ``nginx`` as a :doc:`reverse proxy <../../configuring/proxies>`).
+
+
+Advanced Settings 
+===========
+
+The mongodb nodejs driver has a default connection pool size of 5, if you need to increase this just add a `poolSize` setting into your config.json file under the mongo block.
+
+
+

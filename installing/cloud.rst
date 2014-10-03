@@ -26,3 +26,4 @@ The following are step-by-step guides to help you get up and running on the clou
 * `Digital Ocean <http://burnaftercompiling.com/nodebb/setting-up-a-nodebb-forum-for-dummies/>`_ (external)
 * :doc:`Koding.com <cloud/koding>`
 * `Codio <https://codio.com/s/docs/specifics/nodebb/>`_ (external)
+* `Jelastic <http://docs.jelastic.com/nodebb>`_ (external)

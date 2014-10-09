@@ -57,6 +57,14 @@ Administrating NodeBB
     admin/sso
     admin/uploads
 
+Scaling NodeBB
+--------------
+
+.. toctree::
+     :maxdepth: 2
+
+     scaling/index
+
 Contributing to NodeBB
 ----------------------
 

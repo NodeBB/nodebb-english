@@ -61,9 +61,9 @@ Scaling NodeBB
 --------------
 
 .. toctree::
-     :maxdepth: 2
+    :maxdepth: 2
 
-     scaling/index
+    scaling/index
 
 Contributing to NodeBB
 ----------------------

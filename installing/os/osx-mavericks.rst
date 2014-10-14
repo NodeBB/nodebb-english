@@ -49,7 +49,7 @@ Run interactive installation:
 
 .. code:: bash
 
-    ./nodebb
+    ./nodebb setup
 
 You may leave all of the options as default.
 

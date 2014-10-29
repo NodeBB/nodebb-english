@@ -10,6 +10,7 @@ First, install the following programs:
 * http://nodejs.org/
 * http://sourceforge.net/projects/redis/files/redis-2.6.10/
 * http://imagemagick.org/script/binary-releases.php#windows/
+* https://www.python.org/ftp/python/2.7.8/python-2.7.8.msi
 
 You may have to restart your computer.
 

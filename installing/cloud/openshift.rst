@@ -28,6 +28,23 @@ The ouput of the echo $REDIS_CLI like this : -h ip_redis -p port_redis -a passwo
 
   echo $OPENSHIFT_NODEJS_IP && echo $REDIS_CLI
   
+  
+**Note:** If you're installing NodeBB with Redis for the first time it may be a good idea to clear Redis before you add NodeBB to Openshift! You can quickly do this here by accessing redis in Openshift and then using a flush command to empty that database.
+
+.. code:: bash
+
+  redis-cli $REDIS_CLI
+  flushall
+  
+or...
+
+.. code:: bash
+
+   redis-cli $REDIS_CLI
+   select db_number_of_your_choice
+   flushdb
+   
+  
 **Step 5:** Exit SSH
 
 **Step 6:** Add the source code of Nodebb to the repository application

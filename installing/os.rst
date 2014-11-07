@@ -18,6 +18,8 @@ The following are step-by-step guides to help you get up and running.
     Debian <os/debian>
     SmartOS <os/smartos>
     Windows <os/windows8>
+    Mac <os/osx-mavericks>
+    CentOS <os/centos>
 
 * :doc:`Arch Linux <os/arch>`
 * :doc:`Ubuntu <os/ubuntu>`
@@ -25,7 +27,7 @@ The following are step-by-step guides to help you get up and running.
 * :doc:`SmartOS <os/smartos>`
 * :doc:`Windows <os/windows8>`
 * :doc:`Mac <os/osx-mavericks>`
-* `CentOS <https://blog.tommyparnell.com/installing-nodebb-on-centos-6-5/>`_ (external)
+* :doc:`CentOS <os/centos>`
 
 Cluster Setting
 =======

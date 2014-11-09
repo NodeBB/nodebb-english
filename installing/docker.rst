@@ -4,9 +4,9 @@ Installing NodeBB with Docker
 The following are step-by-step guides to help you get up and running on the cloud using popular the Docker platform. For 
 your convenience, we currently offer both CentOS and Ubuntu Docker builds. 
 
-You can view our official builds on `Docker Hub Registry <https://registry.hub.docker.com/u/nodebb/docker/>`.
+You can view our official builds on `Docker Hub Registry <https://registry.hub.docker.com/u/nodebb/docker/>`_.
 If your intereasting in contributing to our Dockerfiles, you can fork our 
-repository on `GitHub <https://github.com/NodeBB/docker-builds>`.
+repository on `GitHub <https://github.com/NodeBB/docker-builds>`_.
 
 .. note::
 

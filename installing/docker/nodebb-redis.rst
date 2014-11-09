@@ -5,7 +5,7 @@ Requirements
 ---------------
 
 In order to use the NodeBB Docker builds, you will need to have Docker installed. You can find install instructions
-for your system at `http://docs.docker.com/ <http://docs.docker.com/>`.
+for your system at `http://docs.docker.com/ <http://docs.docker.com/>`_.
 
 Stable/Development Builds
 ---------------
@@ -53,5 +53,5 @@ Backup/Restoring
 ---------------
 
 Simply use the `/data` volume inside your Redis instance. See 
-the `official guide on making backups <https://docs.docker.com/userguide/dockervolumes/#backup-restore-or-migrate-data-volumes)>`.
+the `official guide on making backups <https://docs.docker.com/userguide/dockervolumes/#backup-restore-or-migrate-data-volumes)>`_.
 

@@ -18,6 +18,7 @@ Installing NodeBB
 
    installing/os
    installing/cloud
+   installing/docker
 
 
 .. _configuring:

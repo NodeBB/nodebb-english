@@ -32,14 +32,15 @@ The theme configuration file is a simple JSON string containing all appropriate 
 * ``screenshot``: A filename (in the same folder) that is a preview image (ideally, 370x250, or an aspect ratio of 1.48:1)
 * ``url``: A fully qualified URL linking back to the theme's homepage/project
 * ``templates``: (Optional) A system path (relative to your plugin's root directory) to the folder containing template files. If not specified, NodeBB will search for the "templates" directory, and then simply fall back to using vanilla's template files.
+* ``baseTheme``: (Optional) If undefined, will use nodebb-theme-vanilla (our current base theme) as a default for missing template files. See the Child Themes section for more details.
 
 Child Themes
 -------------------------------------
 
-If your theme is based off of another theme, simply modify your LESS files to point to the other theme as a base:
+CSS / LESS
+^^^^^^^^^^^^^^^^^^
 
-topic.less
-^^^^^^^^^^
+If your theme is based off of another theme, simply modify your LESS files to point to the other theme as a base, ex for topics.less:
 
 .. code: css
 
@@ -53,10 +54,21 @@ topic.less
 
 As ``topic.less`` from the theme ``nodebb-theme-vanilla`` was imported, those styles are automatically incorporated into your theme.
 
-**Important**: If you depend on another theme, make sure that your theme specifically states this in its ``package.json``. For example, for the above theme, as we depend on ``nodebb-theme-vanilla``, we would explicitly state this by adding a new section into the ``package.json`` file:
+Templates
+^^^^^^^^^^^^^^^^^^
+
+You do not need to redefine all templates for your theme. If the template file does not exist in your current theme, NodeBB will inherit templates from the baseTheme that you have defined in your ``theme.json`` (or if undefined, it will inherit from ``nodebb-theme-vanilla``'s templates).
+
+
+Configuration
+^^^^^^^^^^^^^^^^^^
+
+If you depend on another theme, make sure that your theme specifically states this in its ``package.json``. For example, for the above theme, as we depend on ``nodebb-theme-vanilla``, we would explicitly state this by adding a new section into the ``package.json`` file:
 
 .. code:: json
 
     "peerDependencies": {
         "nodebb-theme-vanilla": "~0.0.1"
     }
+
+If your theme is dependent on a theme that is not nodebb-theme-vanilla, you should set the ``baseTheme`` configuration in your ``theme.json`` to the appropriate theme.

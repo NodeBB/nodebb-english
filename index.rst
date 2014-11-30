@@ -29,6 +29,7 @@ Configuring NodeBB
 .. toctree::
     :maxdepth: 2
 
+    configuring/config
     configuring/databases
     configuring/proxies
 

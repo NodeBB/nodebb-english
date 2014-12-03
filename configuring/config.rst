@@ -30,7 +30,9 @@ The following values are optional, and override the defaults set by
 NodeBB:
 
 -  ``port`` (Default: ``4567``) Specifies the port number that NodeBB
-   will bind to.
+   will bind to. You can specify an array of ports and NodeBB will spawn port.length processes. 
+   If you use multiple ports you need to configure a load balancer to proxy requests to the different ports.
+   
 -  ``bcrypt_rounds`` (Default: 12) Specifies the number of rounds to
    hash a password. Slower machines may elect to reduce the number of
    rounds to speed up the login process, but you'd more likely want to

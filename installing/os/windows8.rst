@@ -47,7 +47,7 @@ Run interactive installation:
 
 .. code:: bash
 
-    node app.js
+    node app.js --setup
 
 You may leave all of the options as default.
 

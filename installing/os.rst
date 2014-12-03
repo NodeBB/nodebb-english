@@ -29,6 +29,3 @@ The following are step-by-step guides to help you get up and running.
 * :doc:`Mac <os/osx-mavericks>`
 * :doc:`CentOS <os/centos>`
 
-Cluster Setting
-=======
-NodeBB uses the node-cluster module to utilize more than one cpu core. Edit config.json and add a new property called cluster. You should ideally set this to the number of cores your server has. 

@@ -50,11 +50,41 @@ Below is the basic nginx configuration for a NodeBB build running on port ``4567
         }
     }
 
+Below is another nginx configuration for a NodeBB that has `port:["4567","4568"]` in config.json.
+
+.. code:: nginx
+
+    server {
+        listen 80;
+
+        server_name forum.example.org;
+
+        location / {
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Host $http_host;
+            proxy_set_header X-NginX-Proxy true;
+
+            proxy_pass http://io_nodes;
+            proxy_redirect off;
+
+            # Socket.IO Support
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+        }
+    }
+    
+    upstream io_nodes {
+        ip_hash;
+        server 127.0.0.1:4567;
+        server 127.0.0.1:4568;
+    }
 
 Notes
 ------------
 
-* Remember to also edit `config.json` and change `use_port` from `true` to `false`
 * nginx must be on version 1.4.x to properly support websockets. Debian/Ubuntu use 1.2, although it will work there will be a reduction in functionality.
 * The ``proxy_pass`` IP should be ``127.0.0.1`` if your NodeBB is hosted on the same physical server as your nginx server. Update the port to match your NodeBB, if necessary.
 * This config sets up your nginx server to listen to requests for ``forum.example.org``. It doesn't magically route the internet to it, though, so you also have to update your DNS server to send requests for ``forum.example.org`` to the machine with nginx on it!
+

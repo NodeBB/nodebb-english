@@ -14,18 +14,30 @@ Utilise clustering
 
 By default, NodeBB will run on one process, and certain calls may take
 longer than others, resulting in a lag or queue for the same resources.
-To combat this, you can instruct NodeBB to run on multiple processes:
+To combat this, you can instruct NodeBB to run on multiple processes by
+adding the ``port`` property into your ``config.json``:
 
-``./nodebb start --cluster``
+::
 
-By default, NodeBB will detect the number of virtual cores on the system
-and start that many processes. To only start a specific number:
+    {
+        "port": ["4567", "4568", "4569"]  // will start three processes
+    }
 
-``./nodebb start --cluster=2``
 
-If you do not wish to pass the ``--cluster`` flag every time you start
-NodeBB, you can also add the ``cluster`` property into your
-``config.json``.
+A proxy server like Nginx is required in order to load balance requests
+between all of the servers. Add an ``upstream`` block to your config:
+
+::
+
+    upstream io_nodes {
+        ip_hash;
+        server 127.0.0.1:4567;
+        server 127.0.0.1:4568;
+        server 127.0.0.1:4569;
+    }
+
+
+... and alter the ``proxy_pass`` value to read: ``proxy_pass http://io_nodes;``
 
 Use a proxy server to serve static assets
 -----------------------------------------
@@ -36,7 +48,26 @@ this to the end user, the NodeBB process(es) will be left to handle only
 the API calls, which substantially lowers the amount of work for NodeBB
 (and increases your throughput).
 
-Your Nginx config will need to be modified to look something like this:
+Your Nginx config will need to be modified add the following ``location`` blocks:
+
+::
+
+    location @nodebb {
+        proxy_pass http://127.0.0.1:4567;
+    }
+
+    location ~ ^/(images|language|sounds|templates|uploads|vendor|src\/modules|nodebb\.min\.js|stylesheet\.css|admin\.css) {
+        root /path/to/nodebb/public/;
+        try_files $uri $uri/ @nodebb;
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:4567;
+    }
+
+
+Sample Nginx configuration with all of the above applied
+--------------------------------------------------------
 
 ::
 
@@ -62,16 +93,23 @@ Your Nginx config will need to be modified to look something like this:
         gzip_types      text/plain application/xml application/x-javascript text/css application/json;
 
         location @nodebb {
-            proxy_pass http://127.0.0.1:4567;
+            proxy_pass http://io_nodes;
         }
 
-        location ~ ^/(images|language|sounds|templates|uploads|vendor|src\/modules|nodebb\.min\.js(\.map)?|stylesheet\.css|admin\.css) {
+        location ~ ^/(images|language|sounds|templates|uploads|vendor|src\/modules|nodebb\.min\.js|stylesheet\.css|admin\.css) {
             root /path/to/nodebb/public/;
             try_files $uri $uri/ @nodebb;
         }
 
         location / {
-            proxy_pass http://127.0.0.1:4567/;
+            proxy_pass http://io_nodes;
+        }
+
+        upstream io_nodes {
+            ip_hash;
+            server 127.0.0.1:4567;
+            server 127.0.0.1:4568;
+            server 127.0.0.1:4569;
         }
     }
 

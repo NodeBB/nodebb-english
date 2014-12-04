@@ -66,6 +66,16 @@ Your Nginx config will need to be modified add the following ``location`` blocks
     }
 
 
+Furthermore, you can instruct Nginx to serve these assets compressed:
+
+::
+
+    gzip            on;
+    gzip_min_length 1000;
+    gzip_proxied    off;
+    gzip_types      text/plain application/xml application/x-javascript text/css application/json;
+
+
 Sample Nginx configuration with all of the above applied
 --------------------------------------------------------
 

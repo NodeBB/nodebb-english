@@ -42,4 +42,11 @@ NodeBB:
 -  ``upload_path`` (Default: ``/public/uploads``) Specifies the path,
    relative to the NodeBB root install, that uploaded files will be
    saved in.
+   
+- ``jobsDisabled`` This can be added to disable jobs that are run on a certain interval. For example "jobsDisabled":true will disable daily digest emails and notification pruning.
+
+- ``socketioTransports`` (Default: ``["websocket", "polling"]``) Can be used to configure socket.io transports.
+
+
+
 

@@ -45,7 +45,7 @@ NodeBB:
    
 - ``jobsDisabled`` This can be added to disable jobs that are run on a certain interval. For example "jobsDisabled":true will disable daily digest emails and notification pruning.
 
-- ``socketio`` A hash with socket.io settings
+- ``socketio`` A hash with socket.io settings :
 
    - ``transports`` (Default: ``["websocket", "polling"]``) Can be used to configure socket.io transports.
    - ``address`` (Default: ``""``) Address of socket.io server can be empty

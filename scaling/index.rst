@@ -80,7 +80,12 @@ Sample Nginx configuration with all of the above applied
 --------------------------------------------------------
 
 ::
-
+    upstream io_nodes {
+        ip_hash;
+        server 127.0.0.1:4567;
+        server 127.0.0.1:4568;
+        server 127.0.0.1:4569;
+    }
     server {
         listen 80;
 
@@ -113,13 +118,6 @@ Sample Nginx configuration with all of the above applied
 
         location / {
             proxy_pass http://io_nodes;
-        }
-
-        upstream io_nodes {
-            ip_hash;
-            server 127.0.0.1:4567;
-            server 127.0.0.1:4568;
-            server 127.0.0.1:4569;
         }
     }
 

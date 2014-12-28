@@ -80,6 +80,7 @@ Sample Nginx configuration with all of the above applied
 --------------------------------------------------------
 
 ::
+
     upstream io_nodes {
         ip_hash;
         server 127.0.0.1:4567;

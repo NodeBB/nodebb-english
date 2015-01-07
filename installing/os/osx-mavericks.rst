@@ -31,7 +31,7 @@ Clone NodeBB repo:
 
 .. code:: bash
 
-    git clone -b v0.5.x https://github.com/NodeBB/NodeBB.git
+    git clone -b v0.6.x https://github.com/NodeBB/NodeBB.git
 
 Enter directory: 
 

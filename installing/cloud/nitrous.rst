@@ -13,7 +13,7 @@ https://www.nitrous.io/app#/boxes/new
 
 .. code:: bash
 	
-	wget https://github.com/NodeBB/NodeBB/archive/v0.5.x.zip && unzip NodeBB-v0.5.x.zip && rm NodeBB-v0.5.x.zip && cd NodeBB-v0.5.x
+	wget https://github.com/NodeBB/NodeBB/archive/v0.6.x.zip && unzip NodeBB-v0.6.x.zip && rm NodeBB-v0.6.x.zip && cd NodeBB-v0.6.x
 	
 **Step 4:** NPM Install
 

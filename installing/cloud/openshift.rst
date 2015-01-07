@@ -57,7 +57,7 @@ or...
 
 .. code:: bash
 	
-	git pull -s recursive -X theirs upstream v0.5.x && git push
+	git pull -s recursive -X theirs upstream v0.6.x && git push
 	
 **Step 8:** Stop the application
 

@@ -12,7 +12,7 @@ Koding
 7. Enter your password you used to sign up, if you signed up using Github or another 3rd party, you will need to set one in your Account Settings. Then come back.
 8. Now run the following ``sudo apt-get install python-software-properties python g++ make``
 9. Now we install NodeBBs other dependencies - ``sudo apt-get install redis-server imagemagick``
-10. Next, we clone NodeBB into a NodeBB folder - ``git clone -b v0.5.x https://github.com/NodeBB/NodeBB.git nodebb`` (Optional: Replace nodebb at the end if you want the folder to be a different name)
+10. Next, we clone NodeBB into a NodeBB folder - ``git clone -b v0.6.x https://github.com/NodeBB/NodeBB.git nodebb`` (Optional: Replace nodebb at the end if you want the folder to be a different name)
 11. Now enter the NodeBB folder - ``cd nodebb`` (unless you changed the foldername in the previous step, if you somehow forgot what you called it, run ``ls`` to see the name of the folder)
 12. Now we install all the dependencies of NodeBB - ``npm install`` (could take a minute or two)
 13. Set up nodebb using - ``./nodebb setup``

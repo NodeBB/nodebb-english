@@ -54,7 +54,8 @@ The next step is adding the configuration to your virtualhost.conf file, typical
     ProxyPassReverse / http://127.0.0.1:4567/
 
 
-The last thing you need to be sure of is that the config.json in the NodeBB folder has use_port: false. Otherwise some functionality will not work properly.
+The last thing you need to be sure of is that the config.json in the NodeBB folder defines the node.js port outside of the url:
+
 
 
 Example nodebb/config.json
@@ -63,21 +64,16 @@ Example nodebb/config.json
 .. code:: json
 
     {
-        "base_url": "http://www.yoursite.com",
+        "url": "http://www.yoursite.com",
         "port": "4567",
-        "use_port": false,
         "secret": "55sb254c-62e3-4e23-9407-8655147562763",
-        "bind_address": "127.0.0.1",
         "database": "redis",
         "redis": {
             "host": "127.0.0.1",
             "port": "6379",
             "password": "",
             "database": "0"
-        },
-        "bcrypt_rounds": 12,
-        "upload_path": "/public/uploads",
-        "relative_path": ""
+        }
     }
 
 

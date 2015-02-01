@@ -101,9 +101,9 @@ Port number : 8080
 
 IP or Hostname to bind to: Enter what your $OPENSHIFT_NODEJS_IP value holds here found in step 4.
 
-Host IP or address of your MongoDB instance: Enter what your $REDIS_CLI value holds here found in step 4.
+Host IP or address of your Redis instance: Enter what your $REDIS_CLI value holds here found in step 4.
 
-Host port of your MongoDB instance: Enter what your $REDIS_CLI value holds here found in step 4.
+Host port of your Redis instance: Enter what your $REDIS_CLI value holds here found in step 4.
 
 Redis Password: Enter what your $REDIS_CLI value holds here found in step 4.
 

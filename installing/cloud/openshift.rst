@@ -112,7 +112,8 @@ The last step in this process is changing the configuration file that is automat
 You'll want to add a new keyvalue pair for 'bind_address' which will be what your $OPENSHIFT_NODEJS_IP value is.
 I've attached an example of what a config file may look like below
 
-.. code:: bash
+.. code:: json
+
     {
         "url": "http://nodebb-username.rhcloud.com:8080",
         "bind_address": "123.4.56.7",

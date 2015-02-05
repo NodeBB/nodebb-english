@@ -137,3 +137,13 @@ Alternatively, you can disable one plugin by running
 .. code::
 
     ./nodebb reset plugin="nodebb-plugin-im-broken"
+    
+To disable plugins or a single plugin without the `nodebb` script, you can use the following node calls:
+
+.. code::
+
+    node app.js --reset --plugins
+    
+.. code::
+
+    node app.js --reset --plugin="nodebb-plugin-im-broken"

@@ -26,9 +26,6 @@ Each plugin package contains a configuration file called ``plugin.json``. Here i
 .. code:: json
 
     {
-        "id": "my-plugin",
-        "name": "My Awesome Plugin",
-        "description": "Your plugin's description",
         "url": "Absolute URL to your plugin or a Github repository",
         "library": "./my-plugin.js",
         "staticDirs": {
@@ -43,8 +40,6 @@ Each plugin package contains a configuration file called ``plugin.json``. Here i
         ],
         "languages": "path/to/languages"
     }
-
-The ``id`` property is a unique name that identifies the plugin.
 
 The ``library`` property is a relative path to the library in your package. It is automatically loaded by NodeBB (if the plugin is activated).
 

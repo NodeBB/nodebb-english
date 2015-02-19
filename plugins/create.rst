@@ -5,7 +5,7 @@ So you want to write a plugin for NodeBB, that's fantastic! There are a couple o
 
 Like WordPress, NodeBB's plugins are built on top of a hook system in NodeBB. This system exposes parts of NodeBB to plugin creators in a controlled way, and allows them to alter content while it passes through, or execute certain behaviours when triggered.
 
-See the full :doc:`list of hooks <hooks>` for more information.
+See the full `list of hooks <https://github.com/NodeBB/NodeBB/wiki/Hooks/>`_ for more information.
 
 Filters and Actions
 ------------------

@@ -43,3 +43,21 @@ Another way to keep NodeBB up is to use the `forever package <https://github.com
 
     $ npm install -g forever
     $ forever start app.js
+    
+
+Grunt Development
+-----------------------
+
+We can utilize grunt to launch NodeBB and re-compile assets when files are changed. Start up speed is increased because we don't compile assets that weren't modified.
+
+Installing Grunt
+
+.. code:: bash
+
+    $ npm install -g grunt-cli
+    
+Run grunt to start up NodeBB and watch for code changes.
+
+.. code:: bash
+
+    $ grunt

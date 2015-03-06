@@ -1,7 +1,7 @@
 Configuring apache as a proxy
 =============================
 
-*Note: This requires Apache v2.4.x or greater. If your version of Apache is lower, please see :doc:`Apache v2.2.x Instructions <configuring/proxies/apache2.2>`*
+*Note: This requires Apache v2.4.x or greater. If your version of Apache is lower, please see :doc:`Apache v2.2.x Instructions <apache2.2>`*
 
 Enable the necessary modules
 -----------------------------

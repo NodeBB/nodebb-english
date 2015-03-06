@@ -9,8 +9,10 @@ Here a few options that you can use to proxy your NodeBB forum.
 
     Nginx <proxies/nginx>
     Apache <proxies/apache>
+    Apache v2.2.x <proxies/apache2.2>
     Varnish Cache <proxies/varnish>
 
 * :doc:`Nginx <proxies/nginx>`
-* :doc:`Apache <proxies/apache>`
+* :doc:`Apache v2.4.x+ <proxies/apache>`
+* :doc:`Apache v2.2.x <proxies/apache2.2>`
 * :doc:`Varnish Cache <proxies/varnish>`

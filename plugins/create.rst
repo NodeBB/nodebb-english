@@ -38,7 +38,10 @@ Each plugin package contains a configuration file called ``plugin.json``. Here i
             { "hook": "filter:post.save", "method": "filter" },
             { "hook": "action:post.save", "method": "emailme" }
         ],
-        "languages": "path/to/languages"
+        "languages": "path/to/languages",
+        "nbbpm: {
+            { "compatibility": "^0.7.0" }
+        }
     }
 
 The ``library`` property is a relative path to the library in your package. It is automatically loaded by NodeBB (if the plugin is activated).
@@ -56,6 +59,10 @@ The ``hooks`` property is an array containing objects that tell NodeBB which hoo
 * ``priority``, the relative priority of the method when it is eventually called (default: 10)
 
 The ``languages`` property is optional, which allows you to set up your own internationalization for your plugin (or theme). Set up a similar directory structure as core, for example: ``language/en_GB/myplugin.json``.
+
+The ``nbbpm`` property is an object containing NodeBB package manager info.
+
+* ``compatibility`` is a semver specifying the NodeBB version that this plugin is compatible with. 
 
 Writing the plugin library
 ------------------

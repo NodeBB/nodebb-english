@@ -39,8 +39,8 @@ Each plugin package contains a configuration file called ``plugin.json``. Here i
             { "hook": "action:post.save", "method": "emailme" }
         ],
         "languages": "path/to/languages",
-        "nbbpm: {
-            { "compatibility": "^0.7.0" }
+        "nbbpm": {
+            "compatibility": "^0.7.0"
         }
     }
 

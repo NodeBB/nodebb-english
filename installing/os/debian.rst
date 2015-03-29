@@ -79,8 +79,8 @@ For the complete DotDeb repositories :
 
 .. code:: bash
 
-	$ sudo echo 'deb http://packages.dotdeb.org wheezy all' >> /etc/apt/sources.list
-	$ sudo echo 'deb-src http://packages.dotdeb.org wheezy all' >> /etc/apt/sources.list
+	$ sudo echo 'deb http://packages.dotdeb.org wheezy all' > /etc/apt/sources.list.d/dotdeb.list
+	$ sudo echo 'deb-src http://packages.dotdeb.org wheezy all' >> /etc/apt/sources.list.d/dotdeb.list
 
 
 After this, add the following GPC keys :

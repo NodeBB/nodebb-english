@@ -24,7 +24,7 @@ This solution is **ONLY for Debian 7**, simply run the following **as root** :
 
 .. code:: bash
 
-	$ echo "deb http://ftp.us.debian.org/debian wheezy-backports main" >> /etc/apt/sources.list
+	$ echo "deb http://ftp.us.debian.org/debian wheezy-backports main" > /etc/apt/sources.list.d/wheezy-backports.list
 	$ apt-get update
 
 
@@ -79,8 +79,8 @@ For the complete DotDeb repositories :
 
 .. code:: bash
 
-	$ sudo echo 'deb http://packages.dotdeb.org wheezy all' >> /etc/apt/sources.list
-	$ sudo echo 'deb-src http://packages.dotdeb.org wheezy all' >> /etc/apt/sources.list
+	$ sudo echo 'deb http://packages.dotdeb.org wheezy all' > /etc/apt/sources.list.d/dotdeb.list
+	$ sudo echo 'deb-src http://packages.dotdeb.org wheezy all' >> /etc/apt/sources.list.d/dotdeb.list
 
 
 After this, add the following GPC keys :

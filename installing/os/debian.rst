@@ -24,7 +24,7 @@ This solution is **ONLY for Debian 7**, simply run the following **as root** :
 
 .. code:: bash
 
-	$ echo "deb http://ftp.us.debian.org/debian wheezy-backports main" >> /etc/apt/sources.list
+	$ echo "deb http://ftp.us.debian.org/debian wheezy-backports main" >> /etc/apt/sources.list.d/wheezy-backports.list
 	$ apt-get update
 
 

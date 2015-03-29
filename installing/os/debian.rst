@@ -33,7 +33,7 @@ To install Node.js + NPM, run this :
 .. code:: bash
 
 	$ apt-get install nodejs-legacy
-	$ curl --insecure https://www.npmjs.org/install.sh | bash
+	$ curl -L --insecure https://www.npmjs.org/install.sh | bash
 
 
 The following install a Node.js version who is greater than 0.8 (at 29 March 2014 : 0.10.21)

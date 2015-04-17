@@ -23,7 +23,7 @@ adding the ``port`` property into your ``config.json``:
         "port": ["4567", "4568", "4569"]  // will start three processes
     }
 
-Keep in mind you need to start nodebb with node loader.js so that 3 works can be spawned. Using node app.js will only use the first port in the array.
+Keep in mind you need to start nodebb with `node loader.js` or `./nodebb start` so that 3 works can be spawned. Using `node app.js` will only use the first port in the array.
 
 
 A proxy server like Nginx is required in order to load balance requests

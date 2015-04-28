@@ -86,52 +86,52 @@ Below is an nginx configuration which uses SSL.
 
 .. code:: nginx
 
-### redirects http requests to https
-server {
-    listen 80;
-    server_name forum.example.org;
-
-    return 301 https://forum.example.org$request_uri;
-}
-
-### the https server
-server {
-    # listen on ssl, deliver with speedy if possible
-    listen 443 ssl spdy;
-
-    server_name forum.example.org;
-
-    ssl on;
-
-    # change this path!
-    ssl_certificate /path/to/cert/bundle.crt;
-
-    # change this path!
-    ssl_certificate_key /path/to/cert/forum.example.org.key;
-
-    # enables all versions of TLS, but not SSLv2 or 3 which are weak and now deprecated.
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-
-    # disables all weak ciphers
-    ssl_ciphers 'AES128+EECDH:AES128+EDH';
-
-    ssl_prefer_server_ciphers on;
-
-    location / {
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header Host $http_host;
-        proxy_set_header X-NginX-Proxy true;
-
-        proxy_pass http://127.0.0.1:4567/;
-        proxy_redirect off;
-
-        # Socket.IO Support
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
+    ### redirects http requests to https
+    server {
+        listen 80;
+        server_name forum.example.org;
+    
+        return 301 https://forum.example.org$request_uri;
     }
-}
+    
+    ### the https server
+    server {
+        # listen on ssl, deliver with speedy if possible
+        listen 443 ssl spdy;
+    
+        server_name forum.example.org;
+    
+        ssl on;
+    
+        # change this path!
+        ssl_certificate /path/to/cert/bundle.crt;
+    
+        # change this path!
+        ssl_certificate_key /path/to/cert/forum.example.org.key;
+    
+        # enables all versions of TLS, but not SSLv2 or 3 which are weak and now deprecated.
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    
+        # disables all weak ciphers
+        ssl_ciphers 'AES128+EECDH:AES128+EDH';
+    
+        ssl_prefer_server_ciphers on;
+    
+        location / {
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Host $http_host;
+            proxy_set_header X-NginX-Proxy true;
+    
+            proxy_pass http://127.0.0.1:4567/;
+            proxy_redirect off;
+    
+            # Socket.IO Support
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+        }
+    }
 
 Notes
 ------------

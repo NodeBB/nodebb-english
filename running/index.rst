@@ -10,6 +10,34 @@ The preferred way to start and stop NodeBB is by invoking its executable:
 The methods listed below are alternatives to starting NodeBB via the executable.
 
 
+Upstart
+-----------------------
+
+Later version of Ubuntu may utilise `Upstart <http://upstart.ubuntu.com/>`_ to manage processes at boot.
+Upstart also handles restarts of scripts if/when they crash.
+
+You can use Upstart to start/stop/restart your NodeBB.
+
+Note: Prior to NodeBB v0.7.0, Upstart processes would not track the proper pid, meaning there was no way to stop the NodeBB process.
+NodeBB v0.7.0 includes some changes that allow Upstart to control NodeBB more effectively.
+
+You can utilise this Upstart configuration as a template to manage your NodeBB:
+
+.. code::
+
+	start on startup
+	stop on runlevel [016]
+	respawn
+	setuid someuser
+	setgid someuser
+	script
+		cd /path/to/nodebb
+		node loader.js --no-silent --no-daemon
+	end script
+
+From there, you can start stop and restart NodeBB as the root user: ``start nodebb``, ``stop nodebb``, ``restart nodebb``, assuming ``nodebb.conf`` is the name of the Upstart config file.
+
+
 Simple Node.js Process
 -----------------------
 

@@ -27,7 +27,7 @@ Writing Documentation
 
 These docs were written using `Sphinx <http://sphinx-doc.org/>`_ and published using `rtfd.org <http://readthedocs.org/>`_. 
 
-You can edit these docs `directly on GitHub <https://github.com/NodeBB/NodeBB/tree/master/docs>`_, or by clicking on "View page source" on the top right of any page.
+You can edit these docs `directly on GitHub <https://github.com/NodeBB/nodebb-english>`_, or by clicking on "View page source" on the top right of any page.
 
 If you wish, you can clone the repository and compile the documentation yourself. Check out the `Getting Started <https://read-the-docs.readthedocs.org/en/latest/getting_started.html>`_ section for more info on how to accomplish the latter.
 

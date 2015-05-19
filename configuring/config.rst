@@ -47,7 +47,7 @@ NodeBB:
 
 - ``socketio`` A hash with socket.io settings :
 
-   - ``transports`` (Default: ``["websocket", "polling"]``) Can be used to configure socket.io transports.
+   - ``transports`` (Default: ``["polling", "websocket"]``) Can be used to configure socket.io transports.
    - ``address`` (Default: ``""``) Address of socket.io server can be empty
 
 

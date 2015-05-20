@@ -1,28 +1,29 @@
-Openshift Paas
+Openshift PaaS
 ===========
 
 The following are installation instructions for the `Openshift <http://openshift.com>` PaaS.
 
-**Step 1:** Create a new application :
+Before we begin, you need to install rhc command-line at <https://developers.openshift.com/en/managing-client-tools.html>.
+
+**Step 1:** Create a new application. This will create a git repository as well, keep this in mind.
 
 .. code:: bash
 	
 	rhc app create nodebb nodejs-0.10
 
-**Step 2:** Add cartridge Redis
+**Step 2:** Add cartridge Redis.
 
 .. code:: bash
 	
 	rhc add-cartridge http://cartreflect-claytondev.rhcloud.com/reflect?github=smarterclayton/openshift-redis-cart -a nodebb
 
-**Step 3:** SSH to the application
+**Step 3:** Access SSH using this command. This will go in your app you just created.
 
 .. code:: bash
 	
 	rhc app ssh -a nodebb
 	
-**Step 4:** Find out your instance’s ip address NodeJS and Redis so NodeBB can bind to it correctly. This is one of Openshift’s demands and seems to be the only way it will work. You can’t use $IP in your config.json either (which means you can’t enter $IP in the node app –setup). First line : NodeJS and second line : Redis
-The ouput of the echo $REDIS_CLI like this : -h ip_redis -p port_redis -a password
+**Step 4:** Due to one of Openshift's demands, we have to know IP of your app, IP of redis database, PORT of redis database, and PASSWORD of redis database. Save them somewhere.
 
 .. code:: bash
 
@@ -45,27 +46,37 @@ or...
    flushdb
    
   
-**Step 5:** Exit SSH
+**Step 5:** Exit SSH using this command.
 
-**Step 6:** Add the source code of Nodebb to the repository application
+.. code:: bash
+
+	exit
+
+**Step 6:** You'll need clone NodeBB from Github to your app. The command git clone will not work with Openshift.
 
 .. code:: bash
 	
 	cd nodebb && git remote add upstream -m master https://github.com/NodeBB/NodeBB.git
 
-**Step 7:** Get the files
+**Step 7:** Then pull the files from NodeBB's repository.
 
 .. code:: bash
 	
 	git pull -s recursive -X theirs upstream v0.6.x
 	
-**Step 8:** Stop the application
+**Step 8:** Now you will need to commit and push files to your app's repository. Replace message with your message.
+
+.. code:: bash
+
+	git commit -a -m 'message' && git push
+
+**Step 9:** Stop the application
 
 .. code:: bash
 	
 	rhc app stop -a nodebb
 
-**Step 9:** SSH to the application
+**Step 10:** Access SSH again.
 
 .. code:: bash
 	
@@ -82,12 +93,6 @@ or...
 .. code:: bash
 	
 	ctrl + x
-	
-**Step 12:** You will need to update the app and push it. Replace message with your own message. (Make sure you're in NodeBB folder.)
-
-.. code:: bash
-
-	git commit -a -m 'message' && git push
 
 **Step 13:** In other terminal, start the application
 

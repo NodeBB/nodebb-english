@@ -27,7 +27,7 @@ Next, clone this repository:
 
 .. code:: bash
 
-	$ git clone -b v0.6.x https://github.com/NodeBB/NodeBB.git nodebb
+	$ git clone -b v0.7.x https://github.com/NodeBB/NodeBB.git nodebb
 
 
 Obtain all of the dependencies required by NodeBB:

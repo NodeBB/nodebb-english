@@ -62,7 +62,7 @@ or...
 
 .. code:: bash
 	
-	git pull -s recursive -X theirs upstream v0.7.x
+	git pull -s recursive -X theirs upstream v0.6.x
 	
 **Step 8:** Now you will need to commit and push files to your app's repository. Replace message with your message.
 

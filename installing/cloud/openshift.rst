@@ -25,7 +25,7 @@ http://cartreflect-claytondev.rhcloud.com/reflect?github=smarterclayton/openshif
 
 **Step 7:** You should see the notice that it is installed without any errors. It also will tell you the default password. Save it somewhere, as you will need it later.
 
-**Step 10:** Open terminal (or Git Bash) and paste the following command to access SSH.
+**Step 9:** Open terminal (or Git Bash) and paste the following command to access SSH.
 ```
 rhc app ssh -a nodebb
 ```

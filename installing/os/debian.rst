@@ -131,7 +131,7 @@ Now, we have NodeJS installed and Redis ready to be installed, run this command 
 
 .. code:: bash
 
-	$ apt-get install redis-server imagemagick git
+	$ apt-get install redis-server imagemagick git build-essential
 
 
 Next clone this repository :

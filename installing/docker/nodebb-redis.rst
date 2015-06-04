@@ -27,11 +27,11 @@ Next, launch the NodeBB instance, so it links with the just-launched Redis insta
 
 .. code:: bash
 
-    docker run --name my-forum-nodebb --link dockerdev-redis:redis -p 80:80 -p 443:443 -p 4567:4567 -P -t -i nodebb/docker:centos
+    docker run --name my-forum-nodebb --link my-forum-redis:redis -p 80:80 -p 443:443 -p 4567:4567 -P -t -i nodebb/docker:centos
 
 .. code:: bash
 
-    docker run --name my-forum-nodebb --link dockerdev-redis:redis -p 80:80 -p 443:443 -p 4567:4567 -P -t -i nodebb/docker:ubuntu 
+    docker run --name my-forum-nodebb --link my-forum-redis:redis -p 80:80 -p 443:443 -p 4567:4567 -P -t -i nodebb/docker:ubuntu 
 
 You will be asked to configure your NodeBB instance, as no config file was found. Simply press enter for all settings 
 except Redis hostname, which should be `redis` as it is linked using the `--linked` parameter to our Redis instance, 

@@ -38,8 +38,8 @@ Each plugin package contains a configuration file called ``plugin.json``. Here i
             { "hook": "filter:post.save", "method": "filter" },
             { "hook": "action:post.save", "method": "emailme" }
         ],
-        "languages": "path/to/language/folder",
-        "nbbpm: {
+        "languages": "path/to/languages",
+        "nbbpm": {
             "compatibility": "^0.7.0"
         }
     }

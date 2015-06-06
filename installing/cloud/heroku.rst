@@ -10,7 +10,7 @@ Heroku
 5. ``cd /path/to/repo/clone``
 6. Install dependencies locally ``npm install --production``
 7. Create the heroku app: ``heroku create``
-8. Enable `Redis To Go <https://addons.heroku.com/redistogo>`_ for your heroku account: ``heroku addons:add redistogo:nano``
+8. Enable `Redis To Go <https://addons.heroku.com/redistogo>`_ for your heroku account: ``heroku addons:create redistogo:nano``
 9. Run the NodeBB setup script: ``node app --setup`` (information for your Heroku server and Redis to Go instance can be found in your account page)
 
     * Your server name is found in your Heroku app's "settings" page, and looks something like ``adjective-noun-wxyz.herokuapp.com``
@@ -39,7 +39,7 @@ Heroku
 
 	git rm npm-shrinkwrap.json && git add -f Procfile config.json package.json && git commit -am "adding Procfile and configs for Heroku"
 
-13. Push to heroku: ``git push -u heroku v0.5.x:master``
+13. Push to heroku: ``git push -u heroku v0.7.x:master``
     * Ensure that a proper SSH key was added to your account, otherwise the push will not succeed!
 14. Initialise a single dyno: ``heroku ps:scale web=1``
 15. Visit your app!

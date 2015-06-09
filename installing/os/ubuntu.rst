@@ -35,10 +35,18 @@ Obtain all of the dependencies required by NodeBB:
 .. code:: bash
 
     $ cd nodebb
-    $ npm install
+    $ npm install --production
 
 
-Initiate the setup script by running the app with the ``setup`` flag:
+Start the NodeBB Web Installer, and continue setup at http://127.0.0.1:4567.
+
+.. code:: bash
+
+    $ npm start
+
+----
+
+**Alternatively**: Initiate the setup script by running the app with the ``setup`` flag:
 
 
 .. code:: bash

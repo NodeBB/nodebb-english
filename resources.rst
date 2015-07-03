@@ -25,3 +25,6 @@ Themes
 
 Widgets
 -------
+
+Debugging
+-------

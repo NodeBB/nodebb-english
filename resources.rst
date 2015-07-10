@@ -29,7 +29,8 @@ Widgets
 Debugging 
 -------
 (Linux and OSX)
-* Install node-inspector from npm
+
+* Install node-inspector from npm: ``npm i node-inspector -g``
 
 * Start NodeBB in development mode: (in NodeBB root dir): ``./nodebb dev``
 

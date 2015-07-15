@@ -85,6 +85,7 @@ Plugin System
     plugins/create
     plugins/hooks
     plugins/settings
+    plugins/i18n
 
 Widgets System
 --------------

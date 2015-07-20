@@ -18,7 +18,7 @@ You may have to restart your computer.
 Running NodeBB
 ---------------------
 
-Start Redis Server
+Start Redis Server and leave the command window that it starts in open
 
 .. note::
 
@@ -57,6 +57,8 @@ And you're done! After the installation, run
 .. code:: bash
 
     node app.js
+
+and leave the window open.
 
 You can visit your forum at ``http://127.0.0.1:4567/``
 

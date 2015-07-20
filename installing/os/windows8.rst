@@ -7,10 +7,11 @@ Required Software
 First, install the following programs:
 
 * https://windows.github.com/
-* http://nodejs.org/
-* http://sourceforge.net/projects/redis/files/redis-2.6.10/
+* https://nodejs.org/dist/v0.10.35/ 
 * http://imagemagick.org/script/binary-releases.php#windows/
 * https://www.python.org/ftp/python/2.7.8/python-2.7.8.msi
+* https://github.com/MSOpenTech/redis/releases
+* https://www.microsoft.com/en-us/download/details.aspx?id=44914
 
 You may have to restart your computer.
 
@@ -23,7 +24,7 @@ Start Redis Server
 
 	The default location of Redis Server is
 
-	**C:\\Program Files (x86)\\Redis\\StartRedisServer.cmd**
+	**C:\\Program Files\\Redis\\StartRedisServer.cmd**
 
 Open Git Shell, and type the following commands. Clone NodeBB repo:
 

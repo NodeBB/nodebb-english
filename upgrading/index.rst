@@ -122,13 +122,16 @@ For example, if upgrading from ``v0.3.2`` to ``v0.4.3``:
     $ git checkout v0.4.x    # Type this as-is! Not v0.4.2 or v0.4.3, but "v0.4.x"!
     $ git merge origin/v0.4.x
 
-If not upgrading between branches, just run the following command:
+If not upgrading between branches (e.g. ``v0.3.3`` to ``v0.3.4``, just run the following commands:
 
 .. code:: bash
 
-    $ git pull
+    $ git fetch
+    $ git reset --hard origin/v0.3.x    # Replace v0.3.x with the branch name!
 
 This should retrieve the latest (and greatest) version of NodeBB from the repository.
+
+Don't know what branch you are on? Execute ``git rev-parse --abbrev-ref HEAD`` to find out.
 
 Alternatively, download and extract the latest versioned copy of the code from `the Releases Page <https://github.com/NodeBB/NodeBB/releases>`_. Overwrite any files as necessary. This method is not supported.
 

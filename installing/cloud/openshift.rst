@@ -10,7 +10,7 @@ The following are installation instructions for the `Openshift <http://openshift
 http://cartreflect-claytondev.rhcloud.com/github/icflorescu/openshift-cartridge-nodejs
 ```
 
-**Step 3:** Type `nodebb` in application name. If you want another name, you might want this instead: `nodeb-(name)`. Replace `(name)` to whatever you like.
+**Step 3:** Type `nodebb` in application name. If you want another name, you might want this instead: `nodebb-(name)`. Replace `(name)` to whatever you like.
 Note: If it's your first time, you will see a note saying you need to specify a namespace. Namespace can be anything ... as long you do not change application name.
 
 **Step 4:** Scroll all the way down and click 'Create Application'. Then you need to wait for it to finish creating your first NodeBB application.
@@ -106,7 +106,7 @@ Note: Web installer (npm start) might will not work because... it's Openshift.
 
 **Step 18:** Follow what this step carefully!!!
 
-*URL used to access this NodeBB (http://localhost:4567)* - Copy and paste your application's URL address and then add port 8080 like so: http://nodeb-[namespace].rhcloud.com:8080
+*URL used to access this NodeBB (http://localhost:4567)* - Copy and paste your application's URL address and then add port 8080 like so: http://nodebb-[namespace].rhcloud.com:8080
 
 *Please enter a NodeBB secret (code)* - Just press enter.
 

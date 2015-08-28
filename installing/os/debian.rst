@@ -139,7 +139,7 @@ Next clone this repository :
 .. code:: bash
 
 	$ cd /path/to/nodebb/install/location
-	$ git clone -b v0.7.x https://github.com/NodeBB/NodeBB.git nodebb
+	$ git clone -b v0.8.x https://github.com/NodeBB/NodeBB.git nodebb
 
 Now we are going to install all dependencies for NodeBB via NPM :
 
@@ -155,11 +155,11 @@ Install NodeBB by running the app with `--setup` flag :
 	$ ./nodebb setup
 
 
-1. `URL of this installation` is either your public ip address or your domain name pointing to that ip address.  
-    **Example:** ``http://0.0.0.0`` or ``http://example.org``  
+1. `URL of this installation` is either your public ip address or your domain name pointing to that ip address.
+    **Example:** ``http://0.0.0.0`` or ``http://example.org``
 
-2. ``Port number of your NodeBB`` is the port needed to access your site:  
-    **Note:** If you do not proxy your port with something like nginx then port 80 is recommended for production.  
+2. ``Port number of your NodeBB`` is the port needed to access your site:
+    **Note:** If you do not proxy your port with something like nginx then port 80 is recommended for production.
 3. If you used the above steps to setup your redis-server then use the default redis settings.
 
 And after all.. let's run the NodeBB forum

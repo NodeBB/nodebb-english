@@ -12,15 +12,15 @@ https://www.nitrous.io/app#/boxes/new
 **Step 3:** Get the files of NodeBB, unzip, delete master.zip and cd to the folder
 
 .. code:: bash
-	
-	wget https://github.com/NodeBB/NodeBB/archive/v0.7.x.zip && unzip NodeBB-v0.7.x.zip && rm NodeBB-v0.7.x.zip && cd NodeBB-v0.7.x
-	
+
+	wget https://github.com/NodeBB/NodeBB/archive/v0.8.x.zip && unzip NodeBB-v0.8.x.zip && rm NodeBB-v0.8.x.zip && cd NodeBB-v0.8.x
+
 **Step 4:** NPM Install
 
 .. code:: bash
 
   npm install
-  
+
 **Step 5:** Install Redis
 
 .. code:: bash
@@ -30,8 +30,8 @@ https://www.nitrous.io/app#/boxes/new
 **Step 6:** Setup NodeBB
 
 .. code:: bash
-	
-	./nodebb setup 
+
+	./nodebb setup
 
 Leave everything as default but you can change yourself.
 
@@ -40,7 +40,7 @@ I recommend the port number to bind : 8080
 **Step 14:** And the last one, start NodeBB
 
 .. code:: bash
-	
+
 	./nodebb start
 
 And then open the "Preview URI" without port if you have put for port : 8080.

@@ -27,7 +27,7 @@ Next, clone this repository:
 
 .. code:: bash
 
-	$ git clone -b v0.7.x https://github.com/NodeBB/NodeBB.git nodebb
+	$ git clone -b v0.8.x https://github.com/NodeBB/NodeBB.git nodebb
 
 
 Obtain all of the dependencies required by NodeBB:
@@ -54,7 +54,7 @@ Start the NodeBB Web Installer, and continue setup at http://127.0.0.1:4567.
 	$ ./nodebb setup
 
 
-The default settings are for a local server running on the default port, with a redis store on the same machine/port. 
+The default settings are for a local server running on the default port, with a redis store on the same machine/port.
 
 Lastly, we run the forum.
 

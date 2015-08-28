@@ -84,7 +84,7 @@ cd nodebb && git remote add upstream -m master https://github.com/NodeBB/NodeBB.
 
 **Step 14:** Then pull files from NodeBB's repository.
 ```
-git pull -s recursive -X theirs upstream v0.7.x
+git pull -s recursive -X theirs upstream v0.8.x
 ```
 
 **Step 15:** Now you will need to commit and push files to your application's repository. Replace `message` with your message. It will take a while to finish, though.
@@ -140,7 +140,7 @@ Note
 Starting, stopping, reloading, or restarting NodeBB now works on Openshift. Be sure you always do this before doing it. (Replace `[string]` to a valid string.)
 
 .. code:: bash
-	
+
 	rhc app ssh -a nodebb
     cd ~/app-root/repo
     ./nodebb [string]

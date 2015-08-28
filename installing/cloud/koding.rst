@@ -12,11 +12,11 @@ Koding
 7. Enter your password you used to sign up, if you signed up using Github or another 3rd party, you will need to set one in your Account Settings. Then come back.
 8. Now run the following ``sudo apt-get install python-software-properties python g++ make``
 9. Now we install NodeBBs other dependencies - ``sudo apt-get install redis-server imagemagick``
-10. Next, we clone NodeBB into a NodeBB folder - ``git clone -b v0.7.x https://github.com/NodeBB/NodeBB.git nodebb`` (Optional: Replace nodebb at the end if you want the folder to be a different name)
+10. Next, we clone NodeBB into a NodeBB folder - ``git clone -b v0.8.x https://github.com/NodeBB/NodeBB.git nodebb`` (Optional: Replace nodebb at the end if you want the folder to be a different name)
 11. Now enter the NodeBB folder - ``cd nodebb`` (unless you changed the foldername in the previous step, if you somehow forgot what you called it, run ``ls`` to see the name of the folder)
 12. Now we install all the dependencies of NodeBB - ``npm install`` (could take a minute or two)
 13. Set up nodebb using - ``./nodebb setup``
-14. The first setup question will ask for the domain name, this will vary, do not use localhost. Your domain name/Access URI is found on the left sidepanel by clicking the small icon to the right of your koding-vm-ID underneath VMS (it's a circle with 3 dots inside). 
+14. The first setup question will ask for the domain name, this will vary, do not use localhost. Your domain name/Access URI is found on the left sidepanel by clicking the small icon to the right of your koding-vm-ID underneath VMS (it's a circle with 3 dots inside).
 15. Complete the setup (defaults after the domain name are fine to accept, so press enter a few times until you get to "Create an Admin"
 16. Create an Admin Username and password etc, it will then create categories and other things that make NodeBB awesome.
 17. Now we can start NodeBB - ``./nodebb start``

@@ -20,9 +20,9 @@ Install redis with homebrew:
 .. code::
 
   brew install redis
-  
+
 Start redis server, in your terminal enter:
-  
+
 .. code::
 
   redis-server
@@ -31,9 +31,9 @@ Clone NodeBB repo:
 
 .. code:: bash
 
-    git clone -b v0.7.x https://github.com/NodeBB/NodeBB.git
+    git clone -b v0.8.x https://github.com/NodeBB/NodeBB.git
 
-Enter directory: 
+Enter directory:
 
 .. code:: bash
 
@@ -53,7 +53,7 @@ Run interactive installation:
 
 You may leave all of the options as default.
 
-And you're done! After the installation, run 
+And you're done! After the installation, run
 
 .. code:: bash
 

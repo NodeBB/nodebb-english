@@ -133,6 +133,51 @@ Below is an nginx configuration which uses SSL.
         }
     }
 
+Configuring Nginx to use a custom error page
+============================
+
+This example will demonstrate how to configure Nginx to use a custom 502 error page when your forum isn't running.
+
+Create your custom error page
+------------
+
+Create a new file ``502.html`` and place it in the ``/usr/share/nginx/html`` directory. This is where Nginx sets its document root by default. Be sure to add content to your ``502.html`` file. Here's an example which you can copy and paste:
+
+.. code:: html
+
+    <!DOCTYPE html>
+    <html>
+	    <head>
+		    <meta charset="UTF-8">
+		    <title>Insert your page title here</title>
+	    </head>
+	    <body>
+		    <p>Insert your content here.</p>
+	    </body>
+    </html>
+
+Configure Nginx to use your custom error page
+------------
+
+We now need to tell Nginx to use our page when the relevant error occurs. Open your server block file ``/etc/nginx/sites-available/default``. If you're using a non-default server block file, be sure to change ``default``.
+
+.. code:: nginx
+
+    server {
+	    # Config will be here.
+
+	    error_page 502 /502.html;
+
+	    location = /502.html {
+		    root /usr/share/nginx/html;
+		    internal;
+	    }
+    }
+
+The ``error_page`` directive is used so that the custom page you created is served when a 502 error occurs. The location block ensures that the root matches our file system location and that the file is accessible only through internal Nginx redirects.
+
+Restart Nginx ``sudo service nginx restart`` and the next time a user visits your forum when it isn't running, they'll see your custom page.
+
 Notes
 ------------
 

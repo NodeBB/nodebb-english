@@ -133,6 +133,14 @@ Below is an nginx configuration which uses SSL.
         }
     }
 
+Notes
+------------
+
+* nginx must be on version 1.4.x to properly support websockets. Debian/Ubuntu use 1.2, although it will work there will be a reduction in functionality.
+* The ``proxy_pass`` IP should be ``127.0.0.1`` if your NodeBB is hosted on the same physical server as your nginx server. Update the port to match your NodeBB, if necessary.
+* This config sets up your nginx server to listen to requests for ``forum.example.org``. It doesn't magically route the internet to it, though, so you also have to update your DNS server to send requests for ``forum.example.org`` to the machine with nginx on it!
+
+
 Configuring Nginx to use a custom error page
 ============================
 
@@ -177,11 +185,3 @@ We now need to tell Nginx to use our page when the relevant error occurs. Open y
 The ``error_page`` directive is used so that the custom page you created is served when a 502 error occurs. The location block ensures that the root matches our file system location and that the file is accessible only through internal Nginx redirects.
 
 Restart Nginx ``sudo service nginx restart`` and the next time a user visits your forum when it isn't running, they'll see your custom page.
-
-Notes
-------------
-
-* nginx must be on version 1.4.x to properly support websockets. Debian/Ubuntu use 1.2, although it will work there will be a reduction in functionality.
-* The ``proxy_pass`` IP should be ``127.0.0.1`` if your NodeBB is hosted on the same physical server as your nginx server. Update the port to match your NodeBB, if necessary.
-* This config sets up your nginx server to listen to requests for ``forum.example.org``. It doesn't magically route the internet to it, though, so you also have to update your DNS server to send requests for ``forum.example.org`` to the machine with nginx on it!
-

@@ -57,8 +57,6 @@ The ``hooks`` property is an array containing objects that tell NodeBB which hoo
 
 The ``languages`` property is optional, which allows you to set up your own internationalization for your plugin (or theme). Set up a similar directory structure as core, for example: ``language/en_GB/myplugin.json``.
 
-The ``nbbpm`` property is an object containing NodeBB package manager info.
-
 Writing the plugin library
 ------------------
 

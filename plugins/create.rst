@@ -38,10 +38,7 @@ Each plugin package contains a configuration file called ``plugin.json``. Here i
             { "hook": "filter:post.save", "method": "filter" },
             { "hook": "action:post.save", "method": "emailme" }
         ],
-        "languages": "path/to/languages",
-        "nbbpm": {
-            "compatibility": "^0.7.0"
-        }
+        "languages": "path/to/languages"
     }
 
 The ``library`` property is a relative path to the library in your package. It is automatically loaded by NodeBB (if the plugin is activated).
@@ -61,8 +58,6 @@ The ``hooks`` property is an array containing objects that tell NodeBB which hoo
 The ``languages`` property is optional, which allows you to set up your own internationalization for your plugin (or theme). Set up a similar directory structure as core, for example: ``language/en_GB/myplugin.json``.
 
 The ``nbbpm`` property is an object containing NodeBB package manager info.
-
-* ``compatibility`` is a semver specifying the NodeBB version that this plugin is compatible with. 
 
 Writing the plugin library
 ------------------
@@ -112,7 +107,38 @@ In almost all cases, your plugin should be published in `npm <https://npmjs.org/
 
 When installed via npm, your plugin **must** be prefixed with "nodebb-plugin-", or else it will not be found by NodeBB.
 
-As of v0.0.5, "installing" a plugin by placing it in the ``/plugins`` folder is still supported, but keep in mind that the package ``id`` and its folder name must match exactly, or else NodeBB will not be able to load the plugin. *This feature may be deprecated in later versions of NodeBB*.
+Listing your plugin in the NodeBB Package Manager (nbbpm)
+------------------
+
+All NodeBB's grab a list of downloadable plugins from the NodeBB Package Manager, or nbbpm for short.
+
+When you create your plugin and publish it to npm, it will be picked up by nbbpm, although it will not show up in installs until you specify a compatibility string in your plugin's ``package.json``.
+
+To add this data to ``package.json``, create an object called ``nbbpm``, with a property called ``compatibility``. This property's value is a semver range of NodeBB versions that your plugin is compatible with.
+
+You may not know which versions your plugin is compatible with, so it is best to stick with the version range that your NodeBB is using. For example, if you are developing a plugin against NodeBB v0.8.0, the simplest compatibility string would be:
+
+.. code::
+
+    {
+        ...
+        "nbbpm": {
+            "compatibility": "^0.8.0"
+        }
+    }
+
+To allow your plugin to be installed in multiple versions of NodeBB, use this type of string:
+
+.. code::
+
+    {
+        ...
+        "nbbpm": {
+            "compatibility": "^0.7.0 || ^0.8.0"
+        }
+    }
+
+Any valid semver string will work. You can confirm the validity of your semver string at this website: http://jubianchi.github.io/semver-check/
 
 Testing
 ------------------
@@ -132,20 +158,10 @@ You can disable plugins from the ACP, but if your forum is crashing due to a bro
 
 .. code::
 
-    ./nodebb reset plugins
+    ./nodebb reset -p
 
-Alternatively, you can disable one plugin by running
-
-.. code::
-
-    ./nodebb reset plugin="nodebb-plugin-im-broken"
-    
-To disable plugins or a single plugin without the `nodebb` script, you can use the following node calls:
+Alternatively, you can disable a single plugin by running
 
 .. code::
 
-    node app.js --reset --plugins
-    
-.. code::
-
-    node app.js --reset --plugin="nodebb-plugin-im-broken"
+    ./nodebb reset -p nodebb-plugin-im-broken

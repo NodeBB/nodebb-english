@@ -5,22 +5,22 @@ Heroku
 
 1. Download and install `Heroku Toolbelt <https://toolbelt.heroku.com/>`_ for your operating system
 2. Log into your Heroku account: ``heroku login``
-3. Verify your Heroku account by adding a credit card (at http://heroku.com/verify)
+3. Verify your Heroku account by adding a credit card (at http://heroku.com/verify). *Required for enabling Redis To Go Add-on.*
 4. Clone the repository: ``git clone -b v0.8.x https://github.com/NodeBB/NodeBB.git /path/to/repo/clone``
 5. ``cd /path/to/repo/clone``
 6. Install dependencies locally ``npm install --production``
 7. Create the heroku app: ``heroku create``
-8. Enable `Redis To Go <https://addons.heroku.com/redistogo>`_ for your heroku account: ``heroku addons:create redistogo:nano``
+8. Enable `Redis To Go <https://addons.heroku.com/redistogo>`_ for your heroku account (`Nano <https://addons.heroku.com/redistogo#nano>`_ is a free plan): ``heroku addons:create redistogo:nano``
 9. Run the NodeBB setup script: ``node app --setup`` (information for your Heroku server and Redis to Go instance can be found in your account page)
 
     * Your server name is found in your Heroku app's "settings" page, and looks something like ``adjective-noun-wxyz.herokuapp.com``
     * Use any port number. It will be ignored.
-    * Your redis server can be found as part of the redis url. For example, for the url: ``redis://redistogo:h28h3wgh37fns7@crestfish.redistogo.com:12345/``
+    * Your redis server can be found as part of the redis url. For example, for the url: ``redis://redistogo:h28h3wgh37fns7@fishyfish.redistogo.com:12345/``
     * The server is ``fishyfish.redistogo.com``
     * The port is ``12345``
     * The password is ``h28h3wgh37fns7``
 
-10. Add the following three packages to the ``dependencies`` section of your ``package.json``:
+10. Add the following two packages to the ``dependencies`` section of your ``package.json``:
 
 .. code:: json
 

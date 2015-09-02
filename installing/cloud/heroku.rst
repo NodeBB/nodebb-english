@@ -15,12 +15,12 @@ Heroku
 
     * Your server name is found in your Heroku app's "settings" page, and looks something like ``adjective-noun-wxyz.herokuapp.com``
     * Use any port number. It will be ignored.
-    * Your redis server can be found as part of the redis url. For example, for the url: ``redis://redistogo:h28h3wgh37fns7@crestfish.redistogo.com:12345/``
+    * Your redis server can be found as part of the redis url. For example, for the url: ``redis://redistogo:h28h3wgh37fns7@fishyfish.redistogo.com:12345/``
     * The server is ``fishyfish.redistogo.com``
     * The port is ``12345``
     * The password is ``h28h3wgh37fns7``
 
-10. Add the following three packages to the ``dependencies`` section of your ``package.json``:
+10. Add the following two packages to the ``dependencies`` section of your ``package.json``:
 
 .. code:: json
 

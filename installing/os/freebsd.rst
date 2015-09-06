@@ -1,7 +1,7 @@
 FreeBSD
 ==========
 
-This guide is for FreeBSD 10.1-RELEASE. It should work, with slight modifications, for all other relatively moderm versions. 
+This guide is for FreeBSD 10.1-RELEASE. It should work, with slight modifications, for all other relatively modern versions. 
 
 Make sure you are up to date, by running:
 

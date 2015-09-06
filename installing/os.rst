@@ -20,6 +20,7 @@ The following are step-by-step guides to help you get up and running.
     Windows <os/windows8>
     Mac <os/osx-mavericks>
     CentOS <os/centos>
+    FreeBSD <os/freebsd>
 
 * :doc:`Arch Linux <os/arch>`
 * :doc:`Ubuntu <os/ubuntu>`
@@ -28,4 +29,4 @@ The following are step-by-step guides to help you get up and running.
 * :doc:`Windows <os/windows8>`
 * :doc:`Mac <os/osx-mavericks>`
 * :doc:`CentOS <os/centos>`
-
+* :doc:`FreeBSD <os/freebsd>`

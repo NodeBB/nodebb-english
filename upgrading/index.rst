@@ -150,7 +150,7 @@ This script will install any missing dependencies, upgrade any plugins or themes
 * ``ls -d node_modules/nodebb* | xargs -n1 basename | xargs npm update``
 * ``node app --upgrade``
 
-6. Start up NodeBB & Test!
+5. Start up NodeBB & Test!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You should now be running the latest version of NodeBB.

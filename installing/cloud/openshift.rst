@@ -5,10 +5,7 @@ The following are installation instructions for the `Openshift <http://openshift
 
 **Step 1:** Go to https://openshift.redhat.com/app/console/applications and then create an application.
 
-**Step 2:** Scroll down and paste the following URL address in "Code Anything" field box. Then click 'Next'.
-```
-http://cartreflect-claytondev.rhcloud.com/github/icflorescu/openshift-cartridge-nodejs
-```
+**Step 2:** Scroll down and choose Node.js 0.10 in "Other types". Then click 'Next'.
 
 **Step 3:** Type `nodebb` in application name. If you want another name, you might want this instead: `nodebb-(name)`. Replace `(name)` to whatever you like.
 Note: If it's your first time, you will see a note saying you need to specify a namespace. Namespace can be anything ... as long you do not change application name.
@@ -20,7 +17,7 @@ Note: Do not make any changes to your application, just leave them as it is. Oth
 
 **Step 6:** Click 'see the list of cartridges you can add'. Scroll down and then past the following URL address to "Install your own cartridge" field box. Then click 'Next'. You should see if you want to confirm. Click 'Add Cartridge'.
 ```
-http://cartreflect-claytondev.rhcloud.com/reflect?github=smarterclayton/openshift-redis-cart
+http://cartreflect-claytondev.rhcloud.com/reflect?github=transformatordesign/openshift-redis-cart
 ```
 
 **Step 7:** You should see the notice that it is installed without any errors. It also will tell you the default password. Save it somewhere, as you will need it later.

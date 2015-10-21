@@ -86,15 +86,6 @@ which will create a directory structure that can be restored with the `mongorest
 
 It is recommended that you first shut down your database. On Debian / Ubuntu it's likely to be: `sudo service mongodb stop`
 
-Backing up LevelDB
-~~~~~~~~~~~~~~
-
-As LevelDB is simply a collection of flat files, just copy the database over to a safe location, ex.
-
-.. code:: bash
-
-    cp -r /path/to/db /path/to/backups
-
 **Store this file somewhere safe.**
 
 Avatars

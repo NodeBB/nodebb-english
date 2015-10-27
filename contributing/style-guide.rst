@@ -39,7 +39,7 @@ Most callbacks return an error as the first parameter. Handle this error first b
 .. code:: javascript
 
     someFunction(parameters, function(err, data) {
-        if(err) {
+        if (err) {
            return callback(err); // or handle error
         }
         // proceed as usual
@@ -54,17 +54,13 @@ Variables should always be prefaced with the `var` keyword:
 
     var foo = 'bar';
 
-Multiple declarations are to be included in the same `var` statement:
+Use var on multiple declarations :
 
 .. code:: javascript
 
-    var foo = 'bar',
-        bar = 'baz';
+    var foo = 'bar';
+    var bar = 'baz';
 
-Semicolons
--------------------
-
-Use semicolons if at all possible
 
 Nomenclature
 -------------------

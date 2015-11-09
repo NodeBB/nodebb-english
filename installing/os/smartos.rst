@@ -88,7 +88,7 @@ Installation
 
     .. code:: bash
 
-        $ git clone -b v0.8.x https://github.com/NodeBB/NodeBB.git nodebb
+        $ git clone -b v0.9.x https://github.com/NodeBB/NodeBB.git nodebb
 
 5. Install NodeBB's npm dependencies:
 

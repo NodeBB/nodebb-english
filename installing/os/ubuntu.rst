@@ -2,32 +2,34 @@
 Ubuntu
 --------------------
 
-First, we install our base software stack:
+The following installation guide is optimised for Ubuntu LTS versions, and will install NodeBB
+with MongoDB as the data store. Currently at the time of writing, the latest available Ubuntu
+LTS version is **14.04**.
+
+----
+
+First, install the LTS version of Node.js (**v4.2 Argon**):
 
 .. code:: bash
 
-	$ sudo apt-get install git nodejs nodejs-legacy npm redis-server imagemagick build-essential
+	$ curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+
+Next, we'll install the dependencies required by NodeBB
+
+.. code:: bash
+
+	$ sudo apt-get install -y git nodejs mongodb build-essential
 
 
-If you want to use MongoDB, LevelDB, or another database instead of Redis please look at the :doc:`Configuring Databases <../../configuring/databases>` section.
+If you want to use Redis or another database instead of MongoDB please look at the :doc:`Configuring Databases <../../configuring/databases>` section.
 
-**If your package manager only installed a version of Node.js that is less than 0.8 (e.g. Ubuntu 12.10, 13.04), use ``node --version`` to determine your version of Node.js:**
+Next, clone NodeBB into your desired location. If you don't know where, your home directory is acceptable:
 
 
 .. code:: bash
 
-	$ sudo add-apt-repository ppa:chris-lea/node.js
-	$ sudo apt-get update && sudo apt-get dist-upgrade
-
-If you'd like to install Node.js v0.11, use the repository url ``ppa:chris-lea/node.js-devel`` instead.
-The npm is installed with the nodejs
-
-Next, clone this repository:
-
-
-.. code:: bash
-
-	$ git clone -b v0.8.x https://github.com/NodeBB/NodeBB.git nodebb
+	$ cd ~   # Optional
+	$ git clone -b v0.9.x https://github.com/NodeBB/NodeBB.git nodebb
 
 
 Obtain all of the dependencies required by NodeBB:
@@ -38,7 +40,8 @@ Obtain all of the dependencies required by NodeBB:
     $ npm install --production
 
 
-Start the NodeBB Web Installer, and continue setup at http://127.0.0.1:4567.
+Start the NodeBB Web Installer, and continue setup at http://127.0.0.1:4567, and select "MongoDB"
+as your database type.
 
 .. code:: bash
 
@@ -65,3 +68,8 @@ Lastly, we run the forum.
 
 
 NodeBB can also be started with helper programs, such as ``forever``. :doc:`Take a look at the options here <../../running/index>`.
+
+----
+
+If you receive an error stating ``Error: Cannot find module '../build/Release/magic'``, run ``npm i mmmagic``
+and continue as before.

@@ -29,7 +29,7 @@ Open Git Shell, and type the following commands. Clone NodeBB repo:
 
 .. code:: bash
 
-    git clone -b v0.8.x https://github.com/NodeBB/NodeBB.git
+    git clone -b v0.9.x https://github.com/NodeBB/NodeBB.git
 
 Enter directory:
 

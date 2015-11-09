@@ -34,7 +34,7 @@ Clone NodeBB repo (this assumes you have `git` installed, otherwise use `pkg` to
 
 .. code:: bash
 
-    git clone -b v0.8.x https://github.com/NodeBB/NodeBB.git
+    git clone -b v0.9.x https://github.com/NodeBB/NodeBB.git
 
 Enter directory:
 

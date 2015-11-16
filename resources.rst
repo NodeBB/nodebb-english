@@ -16,7 +16,7 @@ Core
 Plugins
 -------
 
-* `Developing plugins with Grunt and Coffeescript <https://github.com/frissdiegurke/nodebb-grunt-development>`_
+* `Writing plugins with Grunt <https://github.com/NodeBB-Community/nodebb-grunt>`_
 * `Writing your first NodeBB plugin <http://burnaftercompiling.com/nodebb/writing-your-first-nodebb-plugin/>`_
 
 

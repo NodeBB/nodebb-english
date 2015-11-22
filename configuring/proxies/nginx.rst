@@ -91,7 +91,7 @@ Below is an nginx configuration which uses SSL.
         listen 80;
         server_name forum.example.org;
     
-        return 301 https://forum.example.org$request_uri;
+        return 301 https://$server_name$request_uri;
     }
     
     ### the https server

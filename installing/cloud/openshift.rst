@@ -15,12 +15,9 @@ Note: Do not make any changes to your application, just leave them as it is. Oth
 
 **Step 5:** You will be asked if you want to code your application. Simply click 'Not now, contiune'. Then you will be redirected to an application page. It will tell you that it is created without any errors and it is started.
 
-**Step 6:** Click 'see the list of cartridges you can add'. Scroll down and then past the following URL address to "Install your own cartridge" field box. Then click 'Next'. You should see if you want to confirm. Click 'Add Cartridge'.
-```
-http://cartreflect-claytondev.rhcloud.com/reflect?github=transformatordesign/openshift-redis-cart
-```
+**Step 6:** Click 'see the list of cartridges you can add'. Choose the MongoDB cartridge. Then click 'Next'. You should see if you want to confirm. Click 'Add Cartridge'.
 
-**Step 7:** You should see the notice that it is installed without any errors. It also will tell you the default password. Save it somewhere, as you will need it later.
+**Step 7:** You should see the notice that it is installed without any errors. It also will tell you the credentials you need to use to access it. Write it down somewhere, as you will need it later.
 
 **Step 9:** Open terminal (or Git Bash) and paste the following command to access SSH.
 ```
@@ -34,26 +31,13 @@ rhc setup
 
 **Step 9:** Paste the following command. Then save the necessary information.
 ```
-echo $OPENSHIFT_NODEJS_IP && echo $REDIS_CLI
+echo $OPENSHIFT_NODEJS_IP && echo $OPENSHIFT_MONGODB_DB_HOST && echo $OPENSHIFT_MONGODB_DB_PORT
 ```
 
 In order:
 First line: NodeJS IP address - You should save it.
-Second line: Redis IP address `-h` - You should save it. Redis Port `-p` - You should save it. Redis Password `-a` - It was already explained in Step 7.
-
-Note: If you're installing NodeBB with Redis first time, you should wipe databases (or one of your choice). Paste the following code.
-```
-redis-cli $REDIS_CLI
-```
-then
-```
-flushall
-```
-or
-```
-select db_number_of_your_choice
-flushdb
-```
+Second line: Mongodb IP address - Write it down.
+Third line: Mongodb Port - Write it down.
 
 **Step 10:** Exit SSH by pasting the following command.
 ```
@@ -81,7 +65,7 @@ cd nodebb && git remote add upstream -m master https://github.com/NodeBB/NodeBB.
 
 **Step 14:** Then pull files from NodeBB's repository.
 ```
-git pull -s recursive -X theirs upstream v0.8.x
+git pull -s recursive -X theirs upstream v0.9.x
 ```
 
 **Step 15:** Now you will need to commit and push files to your application's repository. Replace `message` with your message. It will take a while to finish, though.
@@ -107,15 +91,15 @@ Note: Web installer (npm start) might will not work because... it's Openshift.
 
 *Please enter a NodeBB secret (code)* - Just press enter.
 
-*Which database to use (redis)* - Database of your choice, otherwise just press enter.
+*Which database to use (redis)* - enter `mongo`.
 
-*Host IP or address of your Redis instance (127.0.0.1)* - Copy & paste Redis' IP address found in step 9.
+*Host IP or address of your Mongo instance (127.0.0.1)* - Copy & paste Mongo's IP address found in step 9.
 
-*Host port of your Redis instance (6379)* - Copy & paste: 16379 OR copy & paste Redis' port found in step 9.
+*Host port of your Mongo instance (6379)* - Copy & paste Mongo's port found in step 9.
 
-*Password of your Redis database* - Enter your Redis password found in step 7 or step 9.
+*Password of your Mongo database* - Enter your Mongo password found in step 7 or step 9.
 
-*Which database to use (0)* - Just press enter, unless you perfer different database, go ahead.
+*Which database to use (0)* - Enter the database name you got in step 7.
 
 **Step 19:** Now you will need to edit config.json NodeBB had created. Paste the following command.
 ```

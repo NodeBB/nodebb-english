@@ -18,7 +18,7 @@ Next, we'll install the dependencies required by NodeBB
 
 .. code:: bash
 
-	$ sudo apt-get install -y git nodejs mongodb build-essential
+	$ sudo apt-get install -y git nodejs mongodb build-essential python
 
 
 If you want to use Redis or another database instead of MongoDB please look at the :doc:`Configuring Databases <../../configuring/databases>` section.

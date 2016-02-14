@@ -33,7 +33,7 @@ set to 127.0.0.1.
     RewriteRule /(.*)           ws://127.0.0.1:4567/$1 [P,L]
 
     ProxyPass / http://127.0.0.1:4567/
-    ProxyPassReverse / http://127.0.0.1:4567
+    ProxyPassReverse / http://127.0.0.1:4567/
 
 
 The last thing you need to be sure of is that the ``config.json`` in the NodeBB folder defines the node.js port outside of the url:

@@ -8,7 +8,7 @@ Enable the necessary modules
 
 1. sudo a2enmod proxy
 2. sudo a2enmod proxy_http
-3. sudo a2enmod proxy_wstunnel
+3. sudo a2enmod rewrite
 
 Add the config to Apache
 -----------------------------
@@ -25,14 +25,15 @@ set to 127.0.0.1.
         Order deny,allow
         Allow from all
     </Proxy>
-    ProxyPass /socket.io/1/websocket ws://127.0.0.1:4567/socket.io/1/websocket
-    ProxyPassReverse /socket.io/1/websocket ws://127.0.0.1:4567/socket.io/1/websocket
+    
+    RewriteEngine On
 
-    ProxyPass /socket.io/ http://127.0.0.1:4567/socket.io/
-    ProxyPassReverse /socket.io/ http://127.0.0.1:4567/socket.io/
+    RewriteCond %{REQUEST_URI}  ^/socket.io            [NC]
+    RewriteCond %{QUERY_STRING} transport=websocket    [NC]
+    RewriteRule /(.*)           ws://127.0.0.1:4567/$1 [P,L]
 
     ProxyPass / http://127.0.0.1:4567/
-    ProxyPassReverse / http://127.0.0.1:4567/
+    ProxyPassReverse / http://127.0.0.1:4567
 
 
 The last thing you need to be sure of is that the ``config.json`` in the NodeBB folder defines the node.js port outside of the url:

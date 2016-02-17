@@ -86,7 +86,7 @@ Our library would be written like so:
             }
         };
 
-Getting a reference `req`, `res`, `socket` and `uid` within any plugin hook
+Getting a reference to `req`, `res`, `socket` and `uid` within any plugin hook
 ------------------
 
 .. code:: javascript

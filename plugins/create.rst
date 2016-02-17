@@ -86,6 +86,30 @@ Our library would be written like so:
             }
         };
 
+Getting a reference `req`, `res`, `socket` and `uid` within any plugin hook
+------------------
+
+.. code:: javascript
+    
+    var cls = module.parent.require('./middleware/cls'); // require cls once in your plugin.
+
+    var MyPlugin = {
+            myMethod: function(postData, callback) {
+                var req = cls.get('http').req; // current http request object.
+                var res = cls.get('http').res; // current http response object.
+                var uid = req.user.uid; // current user id
+                // ...
+            },
+            
+            // let's say this one occurs on a websocket event,
+            myOtherMethod: function(somethingData) {
+                var socket = cls.get('ws').socket; // current socket object.
+                var uid = socket.uid; // current user id
+                var payload = cls.get('ws').payload; // socket payload data if available
+                // ...
+            }
+        };
+
 Using NodeBB libraries to enhance your plugin
 ------------------
 

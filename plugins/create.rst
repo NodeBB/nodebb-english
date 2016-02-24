@@ -10,11 +10,13 @@ See the full `list of hooks <https://github.com/NodeBB/NodeBB/wiki/Hooks/>`_ for
 Filters and Actions
 ------------------
 
-There are two types of hooks: **filters** and **actions**.
+There are three types of hooks: **filters**, **actions**, and **static** hooks.
 
 **Filters** act on content, and can be useful if you want to alter certain pieces of content as it passes through NodeBB. For example, a filter may be used to alter posts so that any occurrences of "apple" gets changed to "orange". Likewise, filters may be used to beautify content (i.e. code filters), or remove offensive words (profanity filters).
 
 **Actions** are executed at certain points of NodeBB, and are useful if you'd like to *do* something after a certain trigger. For example, an action hook can be used to notify an admin if a certain user has posted. Other uses include analytics recording, or automatic welcome posts on new user registration.
+
+**Static** hooks are executed and wait for you to do something before continuing. They're similar to action hooks, but whereas execution in NodeBB continues immediately after an action is fired, static hooks grant you a bit of time to run your own custom logic, before resuming execution.
 
 When you are writing your plugin, make sure a hook exists where you'd like something to happen. If a hook isn't present, `file an issue <https://github.com/NodeBB/NodeBB/issues>`_ and we'll include it in the next version of NodeBB.
 
@@ -38,7 +40,14 @@ Each plugin package contains a configuration file called ``plugin.json``. Here i
             { "hook": "filter:post.save", "method": "filter" },
             { "hook": "action:post.save", "method": "emailme" }
         ],
-        "languages": "path/to/languages"
+        "scripts": [
+            "public/src/client.js"
+        ],
+        "acpScripts": [
+            "public/src/admin.js"
+        ],
+        "languages": "path/to/languages",
+        "templates": "path/to/templates"
     }
 
 The ``library`` property is a relative path to the library in your package. It is automatically loaded by NodeBB (if the plugin is activated).
@@ -55,7 +64,15 @@ The ``hooks`` property is an array containing objects that tell NodeBB which hoo
 * ``method``, the method called in your plugin
 * ``priority``, the relative priority of the method when it is eventually called (default: 10)
 
+The ``scripts`` property is an array containing files that will be compiled into the minified javascript payload served to users.
+
+The ``acpScripts`` property is similar to ``scripts``, except these files are compiled into the minified payload served in the Admin Control Panel (ACP)
+
 The ``languages`` property is optional, which allows you to set up your own internationalization for your plugin (or theme). Set up a similar directory structure as core, for example: ``language/en_GB/myplugin.json``.
+
+The ``templates`` property is optional, and allows you to define a folder that contains template files to be loaded into NodeBB. Set up a similar directory structure as core, for example: ``partials/topic/post.tpl``.
+
+The ``nbbpm`` property is an object containing NodeBB package manager info.
 
 Writing the plugin library
 ------------------

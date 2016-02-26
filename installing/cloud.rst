@@ -19,7 +19,7 @@ The following are step-by-step guides to help you get up and running on the clou
     Openshift <cloud/openshift>
     Koding <cloud/koding>
 
-* :doc:`Cloud9 <cloud/cloud9>`
+* `Cloud9 <https://community.nodebb.org/topic/7983/setting-up-nodebb-on-cloud-9>`_ (external)
 * :doc:`Heroku <cloud/heroku>`
 * :doc:`Nitrous.IO <cloud/nitrous>`
 * :doc:`Openshift <cloud/openshift>`

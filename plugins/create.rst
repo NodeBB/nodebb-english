@@ -121,8 +121,12 @@ Getting a reference to `req`, `res`, `socket` and `uid` within any plugin hook
             // let's say this one occurs on a websocket event,
             myOtherMethod: function(somethingData) {
                 var socket = cls.get('ws').socket; // current socket object.
-                var uid = socket.uid; // current user id
-                var payload = cls.get('ws').payload; // socket payload data if available
+                
+                var uid = socket.uid; // current user id, if available
+                
+                var payload = cls.get('ws').payload; // socket payload data, if available
+                var event = cls.get('ws').event; // socket last event, if available
+                
                 // ...
             }
         };

@@ -70,8 +70,9 @@ git remote add upstream -m master https://github.com/NodeBB/NodeBB.git
 
 **Step 14:** Then pull files from NodeBB's repository.
 ```
-git pull -s recursive -X theirs upstream v1.x.x
+git pull -s recursive -X theirs upstream v0.9.x
 ```
+Openshift does not yet support version `1.0.0` or later, see [this issue](https://github.com/ahwayakchih/openshift-nodebb/issues/17).
 
 **Step 15:** Now you will need to commit and push files to your application's repository. Replace `message` with your message. It will take a while to finish, though.
 ```

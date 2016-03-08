@@ -70,7 +70,7 @@ git remote add upstream -m master https://github.com/NodeBB/NodeBB.git
 
 **Step 14:** Then pull files from NodeBB's repository.
 ```
-git pull -s recursive -X theirs upstream v0.9.x
+git pull -s recursive -X theirs upstream v1.x.x
 ```
 
 **Step 15:** Now you will need to commit and push files to your application's repository. Replace `message` with your message. It will take a while to finish, though.

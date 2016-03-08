@@ -38,7 +38,8 @@ Obtain all of the dependencies required by NodeBB:
 
     $ cd nodebb
     $ npm install --production
-
+    
+Now, you need to configure your MondoDB database. To do this, refer to :doc:`MongoDB <../../configuring/databases/mongo>`:
 
 Start the NodeBB Web Installer, and continue setup at http://127.0.0.1:4567, and select "MongoDB"
 as your database type.

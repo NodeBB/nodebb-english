@@ -7,9 +7,12 @@ The following are installation instructions for the `Cloud 9 <https://c9.io/>`_ 
 
 .. code:: bash
 
-	git clone -b v1.x.x https://github.com/NodeBB/NodeBB.git nodebb
+	git clone -b v1.0.0 https://github.com/NodeBB/NodeBB.git nodebb
 
-The nodebb command after the git url will create a file called nodebb so you have to CD into the file after you have cloned NodeBB.
+You'll want to replace ``v1.0.0`` with the (`latest stable version <https://github.com/NodeBB/NodeBB/releases>`_), or ``v1.x.x`` if you'd like
+to set up the latest weekly build of NodeBB.
+
+The nodebb command after the git url will create a folder called nodebb so you have to ``cd`` into that directory after you have cloned NodeBB.
 
 **Step 2:** Install redis with Cloud9's package manager
 

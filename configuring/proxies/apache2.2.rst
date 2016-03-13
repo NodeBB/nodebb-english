@@ -6,8 +6,7 @@ Prerequisites:
 - ``build-essential`` 
 - ``automake`` 
 - ``libtool`` 
--  You can install these packages via
-   ```apt`` <https://help.ubuntu.com/community/AptGet/Howto#Installation_commands>`__
+-  You can install these packages via `apt <https://help.ubuntu.com/community/AptGet/Howto#Installation_commands>`__
 
 You need to manually compile and add the module ``mod_proxy_wstunnel``
 to the Apache 2.2 branch. If you're running Ubuntu (prior to 14.04) or

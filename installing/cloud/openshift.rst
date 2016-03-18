@@ -1,11 +1,11 @@
 Openshift PaaS
 ===========
 
-**Notice: ** A quickstart has been made to handle much of the below by using openshift's environment variables. If you're just getting started please take a look at <a href="https://github.com/ahwayakchih/openshift-nodebb" target="_blank">https://github.com/ahwayakchih/openshift-nodebb</a>
+**Notice: ** A quickstart has been made to handle much of the below by using openshift's environment variables. If you're just getting started please take a look at [https://github.com/ahwayakchih/openshift-nodebb](https://github.com/ahwayakchih/openshift-nodebb)
 
-The following are installation instructions for the `Openshift <http://openshift.com>` PaaS. Before starting, you need to install Red Hat's rhc command line at <a href="https://developers.openshift.com/en/managing-client-tools.html" target="_blank">https://developers.openshift.com/en/managing-client-tools.html</a>
+The following are installation instructions for the `Openshift <http://openshift.com>` PaaS. Before starting, you need to install Red Hat's rhc command line at [https://developers.openshift.com/en/managing-client-tools.html](https://developers.openshift.com/en/managing-client-tools.html)
 
-**Step 1:** Go to <a href="https://openshift.redhat.com/app/console/applications" target="_blank">https://openshift.redhat.com/app/console/applications</a> and then create an application.
+**Step 1:** Go to [https://openshift.redhat.com/app/console/applications](https://openshift.redhat.com/app/console/applications) and then create an application.
 
 **Step 2:** Scroll down and choose Node.js 0.10 in "Other types". Then click 'Next'.
 
@@ -48,7 +48,7 @@ exit
 
 Note: You might have to type 'exit' once, and then again to exit SSH completely.
 
-**Step 11:** Go back to <a href="https://openshift.redhat.com/app/console/applications" target="_blank">https://openshift.redhat.com/app/console/applications</a> and then click NodeBB application. Copy the URL address from "Scoure Code."
+**Step 11:** Go back to [https://openshift.redhat.com/app/console/applications](https://openshift.redhat.com/app/console/applications) and then click NodeBB application. Copy the URL address from "Scoure Code."
 A similar scoure code URL address should be this: ssh://[code]@nodebb-[namespace].rhcloud.com/~/git/nodebb.git/
 
 **Step 12:** Go back to terminal. Paste the following command and then paste the URL address.

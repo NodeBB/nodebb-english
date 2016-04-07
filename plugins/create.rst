@@ -183,6 +183,26 @@ To allow your plugin to be installed in multiple versions of NodeBB, use this ty
 
 Any valid semver string will work. You can confirm the validity of your semver string at this website: http://jubianchi.github.io/semver-check/
 
+Adding Custom Hooks
+------------------
+
+You can use the same hooks sytem that NodeBB uses for plugins to create your own hooks that other plugins can hook into require the plugin librray in your code `var plugins = module.parent.require('./plugins');` and then use the `plugins.fireHook` command where ever you want them to be.
+
+With this code any plugins can do things to the `postData` variable by hooking into the `filter:myplugin.mymethod` as they would a normall function. Once the plugins are done you can continue to work on the variable just as you normally would.
+
+.. code:: javascript
+
+    var Plugins = module.parent.require('./plugins');
+    var MyPlugin = {
+            myMethod: function(postData) {
+                // do something with postData here
+                plugins.fireHook('filter:myplugin.mymethod', {postData : postData });
+                // do more things with postData here
+            }
+        };
+
+
+
 Testing
 ------------------
 

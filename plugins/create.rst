@@ -102,6 +102,8 @@ Our library would be written like so:
                 // do something with postData here
             }
         };
+        
+    module.exports = MyPlugin;
 
 Getting a reference to `req`, `res`, `socket` and `uid` within any plugin hook
 ------------------
@@ -130,6 +132,8 @@ Getting a reference to `req`, `res`, `socket` and `uid` within any plugin hook
                 // ...
             }
         };
+        
+    module.exports = MyPlugin;
 
 Using NodeBB libraries to enhance your plugin
 ------------------

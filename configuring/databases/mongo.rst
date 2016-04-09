@@ -70,6 +70,12 @@ For MongoDB 2.6.x
 .. code::
 
     > db.createUser( { user: "nodebb", pwd: "<Enter in a secure password>", roles: [ "readWrite" ] } )
+
+For earlier versions of MongoDB (if the above throws an error)
+
+.. code::
+
+    > db.addUser( { user: "nodebb", pwd: "<Enter in a secure password>", roles: [ "readWrite" ] } )
     
 **Note**: NodeBB requires MongoDB 2.6.0 or higher. The role ``readWrite`` provides read or write any collection within a specific database to user.
 

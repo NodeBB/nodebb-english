@@ -81,7 +81,7 @@ Note: You might have to type 'exit' once, and then again to exit SSH completely.
 
 **Step 4:** Add NodeBB's Source Code on Openshift:
 
-Go back to [https://openshift.redhat.com/app/console/applications](https://openshift.redhat.com/app/console/applications) and then click NodeBB application. Copy the URL address from "Scoure Code."
+Go back to `your web console <https://openshift.redhat.com/app/console/applications>`_ and then click NodeBB application. Copy the URL address from "Scoure Code."
 
 A similar scoure code URL address should be this: ssh://[code]@nodebb-[namespace].rhcloud.com/~/git/nodebb.git/
 

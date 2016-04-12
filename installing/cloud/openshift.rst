@@ -159,7 +159,7 @@ Note: Web installer (npm start) might will not work because... it's Openshift.
 
 	nano config.json
 
- Add a line below "url" and then add the following. Repleace NodeJS IP Address to IP address of your application. Then exit the editor using CTRL+X.
+Add a line below "url" and then add the following. Repleace NodeJS IP Address to IP address of your application. Then exit the editor using CTRL+X.
  
 ```
 	"bind_address": "NodeJS IP Address",

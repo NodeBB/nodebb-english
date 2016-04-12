@@ -1,7 +1,7 @@
 Openshift PaaS
 ===========
 
-**Notice: ** A quickstart has been made to handle much of the below by using openshift's environment variables. If you're just getting started please take a look at `ahwayakchih's openshift repo <https://github.com/ahwayakchih/openshift-nodebb>`_
+**Notice:** A quickstart has been made to handle much of the below by using openshift's environment variables. If you're just getting started please take a look at `ahwayakchih's openshift repo <https://github.com/ahwayakchih/openshift-nodebb>`_
 
 The following are installation instructions for the `Openshift <http://openshift.com>`_ PaaS. Before starting, you need to install Red Hat's rhc command line at `https://developers.openshift.com/en/managing-client-tools.html <https://developers.openshift.com/en/managing-client-tools.html>`_
 

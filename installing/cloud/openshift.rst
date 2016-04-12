@@ -1,7 +1,9 @@
 Openshift PaaS
 ===========
 
-**Notice:** A quickstart has been made to handle much of the below by using openshift's environment variables. If you're just getting started please take a look at `ahwayakchih's openshift repo <https://github.com/ahwayakchih/openshift-nodebb>`_
+Notice
+---------------------------------------
+A quickstart has been made to handle much of the below by using openshift's environment variables. If you're just getting started please take a look at `ahwayakchih's openshift repo <https://github.com/ahwayakchih/openshift-nodebb>`_
 
 The following are installation instructions for the `Openshift <http://openshift.com>`_ PaaS. Before starting, you need to install Red Hat's rhc command line at `https://developers.openshift.com/en/managing-client-tools.html <https://developers.openshift.com/en/managing-client-tools.html>`_
 
@@ -43,7 +45,7 @@ Click 'see the list of cartridges you can add'. Choose the MongoDB cartridge. Th
 
 After installing the cartridge you'll get a notification of your username and password. Write it down somewhere, as you will need it later.
 
-**Step 4:** Open terminal (or Git Bash) and paste the following command to access SSH.
+Open terminal (or Git Bash) and paste the following command to access SSH.
 
 .. code:: bash
 
@@ -56,7 +58,7 @@ Note: If you got an error that it does not exist or similar, you need to do the 
 
 	rhc setup
 
-**Step 5:** Get your Database's IP and Port 
+Get your Database's Host, IP and Port 
 
 Save this for later as well...
 
@@ -77,7 +79,7 @@ Now exit SSH by pasting the following command.
 
 Note: You might have to type 'exit' once, and then again to exit SSH completely.
 
-**Step 6:** Add NodeBB's Source Code on Openshift:
+**Step 4:** Add NodeBB's Source Code on Openshift:
 
 Go back to [https://openshift.redhat.com/app/console/applications](https://openshift.redhat.com/app/console/applications) and then click NodeBB application. Copy the URL address from "Scoure Code."
 
@@ -115,7 +117,7 @@ Then pull files from NodeBB's repository.
 
 Openshift does not yet support version `1.0.0` or later, see `this issue on github <https://github.com/ahwayakchih/openshift-nodebb/issues/17>`_.
 
-**Step 7:** Upload the source code to Openshift
+**Step 5:** Upload the source code to Openshift
 
 Now you will need to commit and push files to your application's repository. Replace `message` with your message. It will take a while to finish.
 
@@ -123,7 +125,7 @@ Now you will need to commit and push files to your application's repository. Rep
 
 	git commit -a -m 'message' && git push
 
-**Step 8:** Configure and Install NodeBB.
+**Step 6:** Configure and Install NodeBB.
 
 SSH back into your application:
 
@@ -153,7 +155,7 @@ Note: Web installer (npm start) might will not work because... it's Openshift.
 
 *Which database to use (0)* - Enter the database name.
 
-**Step 9:** Now you will need to edit config.json NodeBB had created. Paste the following command.
+**Step 7:** Now you will need to edit config.json NodeBB had created. Paste the following command.
 
 .. code:: bash
 
@@ -165,7 +167,7 @@ Add a line below "url" and then add the following. Repleace NodeJS IP Address to
 "bind_address": "NodeJS IP Address",
 ```
 
-**Step 10:** Now start your NodeBB on Openshift! And you're done! Then visit your website: http://nodebb-[namespace].rhcloud.com/
+**Step 8:** Now start your NodeBB on Openshift! And you're done! Then visit your website: http://nodebb-[namespace].rhcloud.com/
 
 .. code:: bash
 

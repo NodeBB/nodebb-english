@@ -89,7 +89,7 @@ Go back to terminal. Paste the following command and then paste the URL address.
 
 	git clone ssh://[code]@nodebb-[namespace].rhcloud.com/~/git/nodebb.git/
 
-Note: If it exists, check to make sure you do not have more than four files. If it is, delete it and rerun the command. Otherwise contiune to next step.
+Note: If it exists, check to make sure you do not have more than four files. If it is, delete it and rerun the command. Otherwise continue on.
 
 Note: This will create NodeBB folder on your computer, usually ~/users/[name]/NodeBB
 

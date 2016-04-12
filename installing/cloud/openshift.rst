@@ -139,7 +139,7 @@ Start the installation of NodeBB using interactive installer. You're going to fi
 
 	cd ~/app-root/repo && ./nodebb setup
 
-Note: Web installer (npm start) might will not work because... it's Openshift.
+Note: Web installer (npm start) will not work because the application has not been configured to bind to Openshift's allowed ports. We're about to do this right now.
 
 *URL used to access this NodeBB (http://localhost:4567)* - Copy and paste your application's URL address and then add port 8080 like so: http://nodebb-[namespace].rhcloud.com:8080
 
@@ -183,7 +183,7 @@ Starting, stopping, reloading, or restarting NodeBB now works on Openshift. Be s
 	cd ~/app-root/repo
 	./nodebb [string]
 
-If you application fails to start after a git push due to an error like EADDRINUSE openshift's application has critically failed and you may want to consider moving your application to a new instance. Look up backing up and exporting databases. You can still resolve the error by first force stopping your application before making a push, but you will have to do this every single git push from now on.
+If your application fails to start after a git push due to an error like EADDRINUSE openshift's application has critically failed and you may want to consider moving your NodeBB install to a new instance. Look up backing up and exporting databases. You can still resolve the error by first force stopping your application before making a push, but you will have to do this every single git push from now on.
 
 .. code:: bash
 

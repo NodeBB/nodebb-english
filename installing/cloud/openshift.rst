@@ -162,7 +162,7 @@ Note: Web installer (npm start) might will not work because... it's Openshift.
 Add a line below "url" and then add the following. Repleace NodeJS IP Address to IP address of your application. Then exit the editor using CTRL+X.
  
 ```
-	"bind_address": "NodeJS IP Address",
+"bind_address": "NodeJS IP Address",
 ```
 
 **Step 10:** Now start your NodeBB on Openshift! And you're done! Then visit your website: http://nodebb-[namespace].rhcloud.com/

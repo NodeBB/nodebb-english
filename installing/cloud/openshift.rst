@@ -183,7 +183,7 @@ Starting, stopping, reloading, or restarting NodeBB now works on Openshift. Be s
 
 If you application fails to start after a git push due to an error like EADDRINUSE openshift's application has critically failed and you may want to consider moving your application to a new instance. Look up backing up and exporting databases. You can still resolve the error by first force stopping your application before making a push, but you will have to do this every single git push from now on.
 
-..code:: bash
+.. code:: bash
 
 	rhc app-force-stop -a nodebb
 	git push origin master

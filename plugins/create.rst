@@ -127,6 +127,7 @@ Getting a reference to each `request` from within any plugin hook
                 
                 var payload = request.body.payload; // socket payload data, if available
                 var event = request.body.event; // socket last event, if available
+                var params = request.body.params; // socket last params, if available
                 
                 // ...
             }

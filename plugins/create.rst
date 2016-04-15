@@ -114,20 +114,20 @@ Getting a reference to each `request` from within any plugin hook
 
     var MyPlugin = {
             myMethod: function(postData, callback) {
-                var req = cls.get('request'); // current http request object.
-                var uid = req.uid; // current user id
+                var request = cls.get('request'); // current http request object.
+                var uid = request.uid; // current user id
                 // ...
             },
             
             // let's say this one occurs on a websocket event,
             myOtherMethod: function(somethingData) {
-                var request = cls.get('request'); // current reqFromSocket object
+                var request = cls.get('request'); // current returned from Sockets.reqFromSocket() object
                 
                 var uid = request.uid; // current user id, if available
                 
-                var payload = request.body.payload; // socket payload data, if available
-                var event = request.body.event; // socket last event, if available
-                var params = request.body.params; // socket last params, if available
+                var payload = request.body; // socket payload data, if available
+                var event = request.method; // socket last event, if available
+                var params = request.params; // socket last params, if available
                 
                 // ...
             }

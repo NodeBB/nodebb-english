@@ -65,7 +65,7 @@ To add a new database called `nodebb`, type:
 
 To add a user to access the `nodebb` database, type:
 
-For MongoDB 2.6.x
+For MongoDB 2.6.x and 3.2.x
 
 .. code::
 
@@ -87,7 +87,17 @@ Modify ``/etc/mongodb.conf``.
 
     # nano /etc/mongodb.conf
 
-To enable authentication, uncomment ``auth = true``. Restart MongoDB.
+To enable authentication, type:
+
+For MongoDB 2.6.x
+
+Uncomment ``auth = true``.
+
+For MongoDB 3.2.x
+
+Uncomment ``security:`` and add ``authorization: enabled`` below it.
+
+Restart MongoDB.
 
 .. code::
 

@@ -31,7 +31,7 @@ Next, launch the NodeBB instance, so it links with the just-launched Redis insta
     docker run --name my-forum-nodebb --link my-forum-redis:redis -p 80:80 -p 443:443 -p 4567:4567 -P -t -i nodebb/docker:ubuntu 
 
 You will be asked to configure your NodeBB instance, as no config file was found. Simply press enter for all settings 
-except Redis hostname, which should be `redis` as it is linked using the `--linked` parameter to our Redis instance, 
+except the Redis Host IP / Address (which should be `redis` as it is linked using the `--linked` parameter to our Redis instance), 
 and the administrator username, e-mail and password. 
 
 The default port of nodebb is 4567. Ports 80, and 443 have also been exposed for your convenience. You can keep the 

@@ -6,10 +6,9 @@ Heroku
 1. Download and install `Heroku Toolbelt <https://toolbelt.heroku.com/>`_ for your operating system
 2. Log into your Heroku account: ``heroku login``
 3. Verify your Heroku account by adding a credit card (at http://heroku.com/verify). *Required for enabling Redis To Go Add-on.*
-4. Clone the repository: ``git clone -b v1.0.0 https://github.com/NodeBB/NodeBB.git /path/to/repo/clone``
+4. Clone the repository: ``git clone -b v1.x.x https://github.com/NodeBB/NodeBB.git /path/to/repo/clone``
 
-    * You'll want to replace ``v1.0.0`` with the (`latest stable version <https://github.com/NodeBB/NodeBB/releases>`_), or ``v1.x.x`` if you'd like
-to set up the latest weekly build of NodeBB.
+    * To track the latest weekly build of NodeBB, substitute `weekly` in place of `v1.x.x`.
 
 5. ``cd /path/to/repo/clone``
 6. Install dependencies locally ``npm install --production``

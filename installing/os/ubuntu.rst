@@ -29,10 +29,9 @@ Next, clone NodeBB into your desired location. If you don't know where, your hom
 .. code:: bash
 
 	$ cd ~   # Optional
-	$ git clone -b v1.0.0 https://github.com/NodeBB/NodeBB.git nodebb
+	$ git clone -b v1.x.x https://github.com/NodeBB/NodeBB.git nodebb
 
-You'll want to replace ``v1.0.0`` with the (`latest stable version <https://github.com/NodeBB/NodeBB/releases>`_), or ``v1.x.x`` if you'd like
-to set up the latest weekly build of NodeBB.
+To track the latest weekly build of NodeBB, substitute `weekly` in place of `v1.x.x`
 
 
 Obtain all of the dependencies required by NodeBB:

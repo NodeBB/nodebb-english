@@ -43,15 +43,16 @@ NodeBB:
    relative to the NodeBB root install, that uploaded files will be
    saved in.
    
-- ``jobsDisabled`` This can be added to disable jobs that are run on a certain interval. For example "jobsDisabled":true will disable daily digest emails and notification pruning.
+- ``jobsDisabled`` This can be added to disable jobs that are run on a certain interval. 
+   For example "jobsDisabled":true will disable daily digest emails and notification pruning. This option is useful
+   for installations that run multiple NodeBB backends in order to scale. In such a setup, only one backend should
+   handle jobs, and the other backends would set ``jobsDisabled`` to ``true``.
 
 - ``socket.io`` A hash with socket.io settings :
 
    - ``transports`` (Default: ``["polling", "websocket"]``) Can be used to configure socket.io transports.
    - ``address`` (Default: ``""``) Address of socket.io server can be empty
 
-
-
-
-
-
+- ``bind_address`` (Default: ``0.0.0.0``, or all interfaces) Specifies the local address that NodeBB should bind to.
+   By default, NodeBB will listen to requests on all interfaces, but when set, NodeBB will only accept connections
+   from that interface.

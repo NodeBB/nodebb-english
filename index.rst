@@ -55,8 +55,7 @@ Administrating NodeBB
 .. toctree::
     :maxdepth: 2
 
-    admin/outline
-    admin/sso
+    admin/index
     admin/uploads
 
 Scaling NodeBB

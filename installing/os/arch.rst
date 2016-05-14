@@ -6,7 +6,7 @@ First, we install our base software stack.  Be sure to `pacman -Syu` first to ma
 
 .. code:: bash
 
-	$ sudo pacman -S git nodejs npm redis imagemagick
+	$ sudo pacman -S git nodejs npm redis imagemagick icu
 
 
 If you want to use MongoDB, LevelDB, or another database instead of Redis please look at the :doc:`Configuring Databases <../../configuring/databases>` section.

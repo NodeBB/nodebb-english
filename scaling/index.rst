@@ -58,7 +58,7 @@ Your Nginx config will need to be modified add the following ``location`` blocks
         proxy_pass http://127.0.0.1:4567;
     }
 
-    location ~ ^/(images|language|sounds|templates|uploads|vendor|src\/modules|nodebb\.min\.js|stylesheet\.css|admin\.css) {
+    location ~ ^/(images|sounds|templates|uploads|vendor|src\/modules|nodebb\.min\.js|stylesheet\.css|admin\.css) {
         root /path/to/nodebb/public/;
         try_files $uri $uri/ @nodebb;
     }

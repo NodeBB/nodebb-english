@@ -105,36 +105,6 @@ Our library would be written like so:
         
     module.exports = MyPlugin;
 
-Getting a reference to each `request` from within any plugin hook
-------------------
-
-.. code:: javascript
-    
-    var cls = module.parent.require('./middleware/cls'); // require cls once in your plugin.
-
-    var MyPlugin = {
-            myMethod: function(postData, callback) {
-                var request = cls.get('request'); // current http request object.
-                var uid = request.uid; // current user id
-                // ...
-            },
-            
-            // let's say this one occurs on a websocket event,
-            myOtherMethod: function(somethingData) {
-                var request = cls.get('request'); // current returned from Sockets.reqFromSocket() object
-                
-                var uid = request.uid; // current user id, if available
-                
-                var payload = request.body; // socket payload data, if available
-                var event = request.method; // socket last event, if available
-                var params = request.params; // socket last params, if available
-                
-                // ...
-            }
-        };
-        
-    module.exports = MyPlugin;
-
 Using NodeBB libraries to enhance your plugin
 ------------------
 

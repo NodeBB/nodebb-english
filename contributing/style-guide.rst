@@ -1,7 +1,7 @@
 NodeBB Style Guide
 ==================
 
-For the most part, NodeBB follows the `Google Javascript Style Guide <http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml>`_.
+For the most part, NodeBB follows the `Google Javascript Style Guide <https://google.github.io/styleguide/javascriptguide.xml>`_.
 
 Code Formatting
 -------------------

@@ -23,28 +23,17 @@ Heroku
     * The port is ``12345``
     * The password is ``h28h3wgh37fns7``
 
-10. Add the following two packages to the ``dependencies`` section of your ``package.json``:
-
-.. code:: json
-
-        "dependencies": {
-            ...
-            "redis": "~0.10.1",
-            "connect-redis": "~2.0.0"
-        },
-        "devDependencies": {
-
-11. Create a Procfile for Heroku: ``echo "web: node loader.js --no-daemon" > Procfile``
-12. Commit the Procfile:
+10. Create a Procfile for Heroku: ``echo "web: node loader.js --no-daemon" > Procfile``
+11. Commit the Procfile:
 
 .. code:: bash
 
-	git rm npm-shrinkwrap.json && git add -f Procfile config.json package.json && git commit -am "adding Procfile and configs for Heroku"
+	git add -f Procfile config.json package.json && git commit -am "adding Procfile and configs for Heroku"
 
-13. Push to heroku: ``git push -u heroku v1.0.0:master``
+12. Push to heroku: ``git push -u heroku v1.0.0:master``
     * Ensure that a proper SSH key was added to your account, otherwise the push will not succeed!
-14. Initialise a single dyno: ``heroku ps:scale web=1``
-15. Visit your app!
+13. Initialise a single dyno: ``heroku ps:scale web=1``
+14. Visit your app!
 
 If these instructions are unclear or if you run into trouble, please let us know by `filing an issue <https://github.com/NodeBB/NodeBB/issues>`_.
 

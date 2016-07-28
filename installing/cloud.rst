@@ -27,3 +27,5 @@ The following are step-by-step guides to help you get up and running on the clou
 * :doc:`Koding.com <cloud/koding>`
 * `Codio <https://codio.com/docs/ide/tutorials/nodebb/>`_ (external)
 * `Jelastic <http://docs.jelastic.com/nodebb>`_ (external)
+* RoseHosting.com - `CentOS <https://www.rosehosting.com/blog/how-to-install-nodebb-on-a-centos-7-vps/>`_ and `Ubuntu <https://www.rosehosting.com/blog/install-and-setup-nodebb-with-redis-and-nginx-on-ubuntu-12-04/>`_ (external)
+

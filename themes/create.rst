@@ -32,7 +32,7 @@ The theme configuration file is a simple JSON string containing all appropriate 
 * ``screenshot``: A filename (in the same folder) that is a preview image (ideally, 370x250, or an aspect ratio of 1.48:1)
 * ``url``: A fully qualified URL linking back to the theme's homepage/project
 * ``templates``: (Optional) A system path (relative to your plugin's root directory) to the folder containing template files. If not specified, NodeBB will search for the "templates" directory, and then simply fall back to using vanilla's template files.
-* ``baseTheme``: (Optional) If undefined, will use nodebb-theme-vanilla (our current base theme) as a default for missing template files. See the Child Themes section for more details.
+* ``baseTheme``: (Optional) If undefined, will use nodebb-theme-persona (our current base theme) as a default for missing template files. See the Child Themes section for more details.
 
 Child Themes
 -------------------------------------
@@ -57,7 +57,7 @@ As ``topic.less`` from the theme ``nodebb-theme-vanilla`` was imported, those st
 Templates
 ^^^^^^^^^^^^^^^^^^
 
-You do not need to redefine all templates for your theme. If the template file does not exist in your current theme, NodeBB will inherit templates from the baseTheme that you have defined in your ``theme.json`` (or if undefined, it will inherit from ``nodebb-theme-vanilla``'s templates).
+You do not need to redefine all templates for your theme. If the template file does not exist in your current theme, NodeBB will inherit templates from the baseTheme that you have defined in your ``theme.json`` (or if undefined, it will inherit from ``nodebb-theme-persona``'s templates).
 
 
 Configuration

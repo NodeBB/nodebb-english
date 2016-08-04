@@ -60,15 +60,4 @@ Templates
 You do not need to redefine all templates for your theme. If the template file does not exist in your current theme, NodeBB will inherit templates from the baseTheme that you have defined in your ``theme.json`` (or if undefined, it will inherit from ``nodebb-theme-persona``'s templates).
 
 
-Configuration
-^^^^^^^^^^^^^^^^^^
-
-If you depend on another theme, make sure that your theme specifically states this in its ``package.json``. For example, for the above theme, as we depend on ``nodebb-theme-vanilla``, we would explicitly state this by adding a new section into the ``package.json`` file:
-
-.. code:: json
-
-    "peerDependencies": {
-        "nodebb-theme-vanilla": "~0.0.1"
-    }
-
 If your theme is dependent on a theme that is not nodebb-theme-vanilla, you should set the ``baseTheme`` configuration in your ``theme.json`` to the appropriate theme.

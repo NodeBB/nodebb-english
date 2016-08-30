@@ -56,3 +56,5 @@ NodeBB:
 - ``bind_address`` (Default: ``0.0.0.0``, or all interfaces) Specifies the local address that NodeBB should bind to.
    By default, NodeBB will listen to requests on all interfaces, but when set, NodeBB will only accept connections
    from that interface.
+   
+- ``sessionKey`` (Default: ``express.sid``) Specifies the session key to use.

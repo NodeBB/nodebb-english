@@ -9,6 +9,7 @@ Enable the necessary modules
 1. sudo a2enmod proxy
 2. sudo a2enmod proxy_http
 3. sudo a2enmod rewrite
+4. sudo a2enmod mod_headers
 
 Add the config to Apache
 -----------------------------
@@ -26,6 +27,9 @@ set to 127.0.0.1.
         Allow from all
     </Proxy>
     
+    # edit the next line if you use https
+    RequestHeader set X-Forwarded-Proto "http"
+
     RewriteEngine On
 
     RewriteCond %{REQUEST_URI}  ^/socket.io            [NC]

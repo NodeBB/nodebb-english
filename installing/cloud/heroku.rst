@@ -35,7 +35,7 @@ Heroku
 13. Initialise a single dyno: ``heroku ps:scale web=1``
 14. Visit your app!
 
-If these instructions are unclear or if you run into trouble, please let us know by `filing an issue <https://github.com/NodeBB/NodeBB/issues>`_.
+If these instructions are unclear or if you run into trouble, please let us know by creating a topic on the `Community Support Forum <https://community.nodebb.org>`_.
 
 Keeping it up to date
 ---------------------

@@ -10,7 +10,7 @@ For example, if you navigate to `/topic/351/nodebb-wiki <http://community.nodebb
 
 Just prepend api/ to the URL's path name to discover the JSON return. Any value in that return can be utilized in your template.
 
-*A page's name corresponds to the template and language's filename (ex. ``http://domain.com/topic/xyz`` correlates to ``topic.tpl``). Sometimes this is not the case - ex. ``/user/xyz`` loads ``account.tpl``. Have a look at the ``custom_mapping`` section in ``public/templates/config.json`` for more details.
+*A page's name corresponds to the template and language's filename (ex. ``http://domain.com/topic/xyz`` correlates to ``topic.tpl``). 
 
 Templating Basics
 ------------------------------------------------------

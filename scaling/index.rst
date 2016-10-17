@@ -123,4 +123,28 @@ Sample Nginx configuration with all of the above applied
             proxy_pass http://io_nodes;
         }
     }
+    
+Configure redis 
+------------------
+
+When you setup nodebb to use more than one process, you need to configure redis as well. Each nodebb process can communicate with the others through redis pub-sub. Install redis on your server and add a redis block to your config.json. A sample config.json that uses mongodb as datastore and redis for pubsub looks like this. When configured like this redis will also be used as the session store.
+
+::
+    {
+        "url": "http://myforum.com",
+        "secret": "9cc37b87-f95e-427d-951d-66fce2267748",
+        "database": "mongo",
+        "port": [4568,4569],
+        "mongo": {
+            "host": "127.0.0.1",
+            "port": "27017",
+            "database": "0"
+        },
+        "redis": {
+            "host":"127.0.0.1",
+            "port":"6379",
+            "database": 0
+        }
+    }
+
 

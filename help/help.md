@@ -31,7 +31,7 @@ Usage: ./nodebb {start|stop|reload|restart|log|setup|reset|upgrade|dev}
         dev     Start NodeBB in interactive development mode
 ```
 
-### How do I upgrade my NodeBB?
+### How do I upgrade my NodeBB to a newer version?
 
 Please consult [Upgrading NodeBB](../upgrading/index.html)
 

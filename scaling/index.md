@@ -15,22 +15,18 @@ Utilise clustering
 By default, NodeBB will run on one process, and certain calls may take
 longer than others, resulting in a lag or queue for the same resources.
 To combat this, you can instruct NodeBB to run on multiple processes by
-adding the ``port`` property into your ``config.json``:
-
-::
+adding the `port` property into your `config.json`:
 
     {
         "port": ["4567", "4568", "4569"]  // will start three processes
     }
 
-Keep in mind you need to start nodebb with ``node loader.js`` or
-``./nodebb start`` so that 3 workers can be spawned. Using
-``node app.js`` will only use the first port in the array.
+Keep in mind you need to start nodebb with `node loader.js` or
+`./nodebb start` so that 3 workers can be spawned. Using `node app.js` will
+only use the first port in the array.
 
 A proxy server like Nginx is required in order to load balance requests
-between all of the servers. Add an ``upstream`` block to your config:
-
-::
+between all of the servers. Add an `upstream` block to your config:
 
     upstream io_nodes {
         ip_hash;
@@ -39,8 +35,8 @@ between all of the servers. Add an ``upstream`` block to your config:
         server 127.0.0.1:4569;
     }
 
-... and alter the ``proxy_pass`` value to read:
-``proxy_pass http://io_nodes;``
+... and alter the `proxy_pass` value to read:
+`proxy_pass http://io_nodes;`
 
 Use a proxy server to serve static assets
 -----------------------------------------
@@ -51,10 +47,8 @@ this to the end user, the NodeBB process(es) will be left to handle only
 the API calls, which substantially lowers the amount of work for NodeBB
 (and increases your throughput).
 
-Your Nginx config will need to be modified add the following
-``location`` blocks:
-
-::
+Your Nginx config will need to be modified add the following `location`
+blocks:
 
     location @nodebb {
         proxy_pass http://127.0.0.1:4567;
@@ -71,8 +65,6 @@ Your Nginx config will need to be modified add the following
 
 Furthermore, you can instruct Nginx to serve these assets compressed:
 
-::
-
     gzip            on;
     gzip_min_length 1000;
     gzip_proxied    off;
@@ -80,8 +72,6 @@ Furthermore, you can instruct Nginx to serve these assets compressed:
 
 Sample Nginx configuration with all of the above applied
 --------------------------------------------------------
-
-::
 
     upstream io_nodes {
         ip_hash;
@@ -131,11 +121,9 @@ Configure Redis
 When you setup NodeBB to use more than one process, it is advisable to
 configure Redis as well. Each NodeBB process can communicate with the
 others through Redis pub-sub. Install Redis on your server and add a
-``redis`` block to your config.json. A sample ``config.json`` that uses
-mongodb as datastore and Redis for pubsub looks like this. When
-configured like this Redis will also be used as the session store.
-
-::
+`redis` block to your config.json. A sample `config.json` that uses mongodb
+as datastore and Redis for pubsub looks like this. When configured like
+this Redis will also be used as the session store.
 
     {
         "url": "<http://example.org>",
@@ -153,3 +141,5 @@ configured like this Redis will also be used as the session store.
             "database": 0
         }
     }
+
+

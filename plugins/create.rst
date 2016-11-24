@@ -157,6 +157,30 @@ To allow your plugin to be installed in multiple versions of NodeBB, use this ty
 
 Any valid semver string will work. You can confirm the validity of your semver string at this website: http://jubianchi.github.io/semver-check/
 
+
+
+Linking the plugin
+------------------
+
+To test the plugin before going through the process of publishing, try linking the plugin into the node_module folder of your instance.
+https://docs.npmjs.com/cli/link
+
+Using the terminal in the folder were you created your plugin, ``/plugins/my-plugin``.
+
+.. code::
+
+    npm link
+ 
+Then in the source folder were nodebb is installed.
+
+.. code::
+
+    npm link my-plugin
+    
+Your plugin should now be available in admin to be activated.
+
+
+
 Adding Custom Hooks
 ------------------
 

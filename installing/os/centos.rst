@@ -2,7 +2,7 @@
 CentOS 6/7
 --------------------
 
-First we should make sure that CentOS is up to date, we can to so using this command:
+First we should make sure that CentOS is up to date, we can do so using this command:
 
 .. code:: bash
 

@@ -18,7 +18,6 @@ Installing NodeBB
 
    installing/os
    installing/cloud
-   installing/docker
 
 
 .. _configuring:
@@ -134,4 +133,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

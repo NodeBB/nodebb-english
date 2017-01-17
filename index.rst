@@ -3,7 +3,7 @@
 |
 **NodeBB** is a next-generation discussion platform that utilizes web sockets for instant interactions and real-time notifications. NodeBB forums have many modern features out of the box such as social network integration and streaming discussions.
 
-NodeBB is an open source project which can be forked on `GitHub <https://github.com/NodeBB/NodeBB/>`_. Don't forget to check out the ways that you can help contribute to this project, from translations, pull requests, and telling your friends.
+NodeBB is an open source project which can be forked on `GitHub <https://github.com/NodeBB/NodeBB/>`_. If there any discrepancies in the documentation please feel free to submit a pull request (via the "Edit on GitHub" button on the top right) or raise an issue on our `issue tracker <https://github.com/NodeBB/NodeBB/>`_.
 
 Table of Contents
 =================

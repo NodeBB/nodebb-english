@@ -41,7 +41,7 @@ server {
         proxy_set_header Host $http_host;
         proxy_set_header X-NginX-Proxy true;
 
-        proxy_pass http://127.0.0.1:4567/;
+        proxy_pass http://127.0.0.1:4567;
         proxy_redirect off;
 
         # Socket.IO Support
@@ -121,7 +121,7 @@ server {
         proxy_set_header Host $http_host;
         proxy_set_header X-NginX-Proxy true;
 
-        proxy_pass http://127.0.0.1:4567/;
+        proxy_pass http://127.0.0.1:4567;
         proxy_redirect off;
 
         # Socket.IO Support

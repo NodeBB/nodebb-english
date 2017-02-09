@@ -71,6 +71,25 @@ For MongoDB 2.6.x and 3.2.x
 
     > db.createUser( { user: "nodebb", pwd: "<Enter in a secure password>", roles: [ "readWrite" ] } )
 
+If you want to be able to view database statistics in NodeBB's admin control panel (Advanced → Database) type also this command:
+
+.. code::
+
+    > db.grantRolesToUser("nodebb",[{ role: "clusterMonitor", db: "admin" }]);
+
+If you don't type the last command you will get this error message when trying to see database statistics:
+
+.. code::
+
+    Internal Error.
+    
+    Oops! Looks like something went wrong!
+    
+    /api/admin/advanced/database
+    
+    not authorized on nodebb to execute command { serverStatus: 1 }
+
+
 For earlier versions of MongoDB (if the above throws an error)
 
 .. code::
@@ -95,7 +114,12 @@ Uncomment ``auth = true``.
 
 For MongoDB 3.2.x
 
-Uncomment ``security:`` and add ``authorization: enabled`` below it.
+Uncomment ``security:`` and add ``authorization: enabled`` below it (and don't forget to put two spaces before the second line). It should look like this:
+
+.. code::
+
+    security:
+      authorization: enabled
 
 Restart MongoDB.
 

@@ -220,14 +220,16 @@ SELinux fix
 
 Type as root:
 
-```
-setsebool -P httpd_can_network_connect on
-```
+::
+
+   setsebool -P httpd_can_network_connect on
+
 
 This will prevent the "bad gateway" error. Tested on CentOS 7.
 
 You may check the current status of this boolean varialbe with this command:
 
-```
-getsebool -a | grep httpd_can_network_connect
-```
+::
+
+    getsebool -a | grep httpd_can_network_connect
+

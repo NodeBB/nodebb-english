@@ -7,7 +7,7 @@ Required Software
 First, install the following programs:
 
 * https://windows.github.com/
-* https://nodejs.org/dist/latest-v4.x/
+* https://nodejs.org/en/download/
 * http://imagemagick.org/script/binary-releases.php#windows/
 * https://www.python.org/ftp/python/2.7.8/python-2.7.8.msi
 * https://github.com/MSOpenTech/redis/releases

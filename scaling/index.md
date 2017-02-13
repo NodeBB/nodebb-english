@@ -54,14 +54,21 @@ blocks:
         proxy_pass http://127.0.0.1:4567;
     }
 
-    location ~ ^/(images|sounds|templates|uploads|vendor|src\/modules|nodebb\.min\.js|stylesheet\.css|admin\.css) {
-        root /path/to/nodebb/public/;
-        try_files $uri $uri/ @nodebb;
+    location ~ ^/assets/(.*) {
+        root /path/to/nodebb/;
+        try_files /build/public/$1 /public/$1 @nodebb;
+    }
+
+    location /plugins/ {
+        root /path/to/nodebb/build/public/;
+        try_files $uri @nodebb;
     }
 
     location / {
         proxy_pass http://io_nodes;
     }
+
+**Note**: This configuration is only applicable to NodeBB versions v1.4.3 and above.
 
 Furthermore, you can instruct Nginx to serve these assets compressed:
 
@@ -105,15 +112,22 @@ Sample Nginx configuration with all of the above applied
             proxy_pass http://io_nodes;
         }
 
-        location ~ ^/(images|language|sounds|templates|uploads|vendor|src\/modules|nodebb\.min\.js|stylesheet\.css|admin\.css) {
-            root /path/to/nodebb/public/;
-            try_files $uri $uri/ @nodebb;
+        location ~ ^/assets/(.*) {
+            root /path/to/nodebb/;
+            try_files /build/public/$1 /public/$1 @nodebb;
+        }
+
+        location /plugins/ {
+            root /path/to/nodebb/build/public/;
+            try_files $uri @nodebb;
         }
 
         location / {
             proxy_pass http://io_nodes;
         }
     }
+
+**Note**: This configuration is only applicable to NodeBB versions v1.4.3 and above.
 
 Configure Redis
 ---------------
@@ -126,7 +140,7 @@ as datastore and Redis for pubsub looks like this. When configured like
 this Redis will also be used as the session store.
 
     {
-        "url": "<http://example.org>",
+        "url": "http://example.org",
         "secret": "your-secret-goes-here",
         "database": "mongo",
         "port": [4568,4569],

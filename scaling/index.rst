@@ -143,13 +143,14 @@ v1.4.3 and above.
 
 If you have upgraded your NodeBB from a version that has images on `/uploads/files` directory (instead of `/assets/uploads/files`) you may add this:
 
-```
+::
+
     # Backward compatibility
     location /uploads/ {
       root /path/to/nodebb/public;
       try_files $uri =404;
     }
-```
+
 
 Configure Redis
 ---------------

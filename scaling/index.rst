@@ -183,7 +183,7 @@ A sample config.json to use mongodb replica sets
         "mongo": {
             "host": "1.1.1.1,2.2.2.2,3.3.3.3",
             "port": "27017,27017,27017",
-            "database": "myDbName?replicateSet=myReplSet",
+            "database": "myDbName?replicaSet=myReplSet",
             "options": {
                 "server": {
                     "socketOptions" : {

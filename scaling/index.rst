@@ -175,7 +175,8 @@ Configure Mongodb
 A sample config.json to use mongodb replica sets
  
 ::
-      {
+
+    {
         "url": "http://forum.com",
         "secret": "secret",
         "database": "mongo",

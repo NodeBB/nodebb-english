@@ -169,3 +169,40 @@ configured like this Redis will also be used as the session store.
             "database": 0
         }
     }
+    
+  Configure Mongodb
+  -----------------
+  A sample config.json to use mongodb replica sets
+  
+  ::
+      {
+        "url": "http://forum.com",
+        "secret": "secret",
+        "database": "mongo",
+        "mongo": {
+            "host": "1.1.1.1,2.2.2.2,3.3.3.3",
+            "port": "27017,27017,27017",
+            "database": "myDbName?replicateSet=myReplSet",
+            "options": {
+                "server": {
+                    "socketOptions" : {
+                        "keepAlive": 1000,
+                        "autoReconnect": true
+                    }
+                },
+                "replSet": {
+                    "socketOptions": {
+                        "keepAlive": 1000,
+                        "autoReconnect": true
+                    }
+                }
+            }
+        },
+        "redis": {
+            "host":"127.0.0.1",
+            "port":"6379",
+            "password":"",
+            "database": 0
+        }   
+    }
+

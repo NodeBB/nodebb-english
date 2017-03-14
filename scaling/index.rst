@@ -170,11 +170,11 @@ configured like this Redis will also be used as the session store.
         }
     }
     
-  Configure Mongodb
-  -----------------
-  A sample config.json to use mongodb replica sets
-  
-  ::
+Configure Mongodb
+-----------------
+A sample config.json to use mongodb replica sets
+ 
+::
       {
         "url": "http://forum.com",
         "secret": "secret",

@@ -94,7 +94,7 @@ privileges:
 
 .. code::
 
-  > db.createUser( { user: "nodebb", pwd: "<Enter a secure password", roles: [ { role: "readWrite", db: "nodebb" }, { role: "clusterMonitor", db: "admin" } ] } )
+  > db.createUser( { user: "nodebb", pwd: "<Enter a secure password>", roles: [ { role: "readWrite", db: "nodebb" }, { role: "clusterMonitor", db: "admin" } ] } )
 
 The ``readWrite`` permission allows NodeBB to store and retrieve data from the ``nodebb`` database. The
 ``clusterMonitor`` permission provides NodeBB read-only access to query database server statistics which are then

@@ -165,7 +165,7 @@ subdirectories. This will ensure that NodeBB can configure plugins and update.
 
 .. code:: bash
 
-	$ sudo adduser --system --group nodebb
+	$ sudo adduser --system --group --no-create-home nodebb
 	$ sudo chown -R nodebb:nodebb /opt/nodebb
 
 The last setup item is to configure NodeBB to start automatically. Modern linux systems have adopted

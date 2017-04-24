@@ -10,7 +10,7 @@ Enable the necessary modules
 2. sudo a2enmod proxy_http
 3. sudo a2enmod proxy_wstunnel
 4. sudo a2enmod rewrite
-5. sudo a2enmod mod_headers
+5. sudo a2enmod headers
 
 Add the config to Apache
 -----------------------------

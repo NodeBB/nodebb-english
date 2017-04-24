@@ -8,8 +8,9 @@ Enable the necessary modules
 
 1. sudo a2enmod proxy
 2. sudo a2enmod proxy_http
-3. sudo a2enmod rewrite
-4. sudo a2enmod headers
+3. sudo a2enmod proxy_wstunnel
+4. sudo a2enmod rewrite
+5. sudo a2enmod headers
 
 Add the config to Apache
 -----------------------------

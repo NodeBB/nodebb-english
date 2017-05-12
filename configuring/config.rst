@@ -22,6 +22,7 @@ Some of these values are saved via the setup script:
 
    -  ``host``
    -  ``port``
+   -  ``uri`` (MongoDB only connection string)
    -  ``username`` (MongoDB only)
    -  ``password``
    -  ``database``

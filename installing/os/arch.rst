@@ -16,9 +16,7 @@ Next, clone this repository:
 
 .. code:: bash
 
-	$ git clone -b v1.x.x https://github.com/NodeBB/NodeBB.git nodebb
-
-To track the latest weekly build of NodeBB, substitute `weekly` in place of `v1.x.x`
+	$ git clone -b v1.5.x https://github.com/NodeBB/NodeBB.git nodebb
 
 Obtain all of the dependencies required by NodeBB:
 

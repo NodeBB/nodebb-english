@@ -7,9 +7,7 @@ The following are installation instructions for the `Cloud 9 <https://c9.io/>`_ 
 
 .. code:: bash
 
-	git clone -b v1.x.x https://github.com/NodeBB/NodeBB.git nodebb
-
-To track the latest weekly build of NodeBB, substitute `weekly` in place of `v1.x.x`
+	git clone -b v1.5.x https://github.com/NodeBB/NodeBB.git nodebb
 
 The nodebb command after the git url will create a folder called nodebb so you have to ``cd`` into that directory after you have cloned NodeBB.
 

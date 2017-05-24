@@ -165,9 +165,9 @@ is used, though any destination is fine:
 .. code:: bash
 
     $ cd /opt
-    $ git clone -b v1.x.x https://github.com/NodeBB/NodeBB.git $HOME/nodebb
+    $ git clone -b v1.5.x https://github.com/NodeBB/NodeBB.git $HOME/nodebb
 
-This clones the NodeBB repository from the ``v1.x.x`` branch to your
+This clones the NodeBB repository from the ``v1.5.x`` branch to your
 home directory. A list of alternative branches are available in the
 `NodeBB Branches <https://github.com/NodeBB/NodeBB/branches>`__ GitHub
 page.

@@ -30,9 +30,7 @@ Open Git Shell, and type the following commands. Clone NodeBB repo:
 
 .. code:: bash
 
-    git clone -b v1.x.x https://github.com/NodeBB/NodeBB.git
-
-To track the latest weekly build of NodeBB, substitute `weekly` in place of `v1.x.x`
+    git clone -b v1.5.x https://github.com/NodeBB/NodeBB.git
 
 Enter directory:
 

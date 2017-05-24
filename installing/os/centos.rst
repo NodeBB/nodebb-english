@@ -45,10 +45,7 @@ Next, clone the NodeBB repository:
 .. code:: bash
 
 	cd /path/to/nodebb/install/location
-	git clone -b v1.0.0 https://github.com/NodeBB/NodeBB nodebb
-
-You'll want to replace ``v1.0.0`` with the (`latest stable version <https://github.com/NodeBB/NodeBB/releases>`_), or ``v1.x.x`` if you'd like
-to set up the latest weekly build of NodeBB.
+	git clone -b v1.5.x https://github.com/NodeBB/NodeBB nodebb
 
 **Note: To clone the master branch you can use the same command with out the "-b" option.
 

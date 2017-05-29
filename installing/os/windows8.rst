@@ -60,7 +60,7 @@ And you're done! After the installation, run
 
 and leave the window open.
 
-You can visit your forum at ``http://127.0.0.1:4567/``
+You can visit your forum at ``http://localhost:4567/``
 
 
 Developing on Windows

@@ -1,0 +1,55 @@
+Active NodeBB sites
+===================================
+
+This list covers all active sites that use NodeBB on there site.
+
+- `35Hz <http://35hz.co.uk/>`_
+- `Notepad++ Community <https://notepad-plus-plus.org/community/>`_
+- `Kamloops Makerspace <http://community.kamloopsmakerspace.com/>`_
+- `Expii <http://concourse.expii.com/>`_
+- `Afraid to ask <http://forums.afraidtoask.com/>`_
+- `Kubuckets <http://kubuckets.com/>`_
+- `BitBangers <https://bitbangers.co.uk/>`_
+- `NodeJS Forums <http://www.nodejsforums.com/>`_
+- `Coinunity.sk <http://coinunity.sk>`_
+- `Lost Decade Games <http://forum.lostdecadegames.com/>`_
+- `Anxietyhelp.org <http://anxietyhelp.org/>`_
+- `MangoLassi <http://mangolassi.it/>`_
+- `MySensors <http://forum.mysensors.org/>`_
+- `CryptoFR <https://www.cryptofr.com>`_
+- `PURE DATA Forum <http://forum.pdpatchrepo.info/>`_
+- `VPSie <https://vpsie.com/community/>`_
+- `SPFLForum <http://www.spflforum.com/>`_
+- `Gruppe Adler <http://forum.gruppe-adler.de/>`_
+- `RCAA World <http://www.rcaaworld.com/>`_
+- `Tummenur.nu <https://forum.tummenur.nu/>`_
+- `Kano World <http://world.kano.me/forum>`_
+- `Star.aow.me <http://star.aow.me/>`_
+- `Dealstan <http://app.dealstan.com/>`_
+- `The Options Forum <http://optionsforum.net/>`_
+- `Libgdx <http://www.libgdx.cn/>`_
+- `Gamers Tavern <http://gamerstavern.rocks/>`_
+- `VSquare <http://www.vsquarebackup.com/forum/>`_
+- `Galaxy Graph <http://forum.galaxygraph.fr/>`_
+- `Gamrhaus <http://community.gamrha.us/>`_
+- `Reel Fishing Talk <http://www.reelfishingtalk.com/>`_
+- `Meaxplay <http://community.meaxplay.com/>`_
+- `Battle Realms France <https://battle-realms.fr/>`_
+- `Motorcycle News <https://forum.motorcyclenews.com/>`_
+- `Openbadges <https://openbadges.it/>`_
+- `Pichalite  (Test forum)<http://pichalite.com/>`_
+- `IUI Norge <http://miuios.no/>`_
+- `Qt <http://forum.qt.io/>`_
+- `MyTechZone <http://mytechzone.eu/>`_
+- `odeBB.se <https://www.nodebb.se/>`_
+- `Exo.do <http://exo.do/>`_
+- `ITProTV <https://forums.itpro.tv/>`_
+- `Geek.tj <http://geek.tj/>`_
+- `Radxa <http://talk.radxa.com/>`_
+- `Meizufans <https://meizufans.eu/forum/>`_
+- `PonoyVerge <http://pinoyverge.com/>`_
+- `Badminton Birdie <http://forums.badmintonbirdie.net/>`_
+- `Fbloggers <https://fbloggers.com/>`_
+- `LowMyPrice <http://lowmyprice.com/>`_
+- `Coloradorks <http://coloradorks.com/>`_
+- `Mammagrupper <http://forum.mammagrupper.com>`_

@@ -27,7 +27,7 @@ Heroku
 
 	git add -f Procfile config.json package.json && git commit -am "adding Procfile and configs for Heroku"
 
-12. Push to heroku: ``git push -u heroku v1.0.0:master``
+12. Push to heroku: ``git push -u heroku v1.5.x:master``
     * Ensure that a proper SSH key was added to your account, otherwise the push will not succeed!
 13. Initialise a single dyno: ``heroku ps:scale web=1``
 14. Visit your app!

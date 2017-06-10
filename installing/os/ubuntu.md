@@ -97,13 +97,13 @@ $ mongo
 
 Switch to the built-in `admin` database:
 
-``` {.sourceCode .}
+``` {.sourceCode}
 > use admin
 ```
 
 Create an administrative user (**not** the `nodebb` user). Replace the placeholders `<Enter a username>` and `<Enter a secure password>` with your own selected username and password. Be sure that the `<` and `>` are also not left behind.
 
-``` {.sourceCode .}
+``` {.sourceCode}
 > db.createUser( { user: "<Enter a username>", pwd: "<Enter a secure password>", roles: [ { role: "readWriteAnyDatabase", db: "admin" }, { role: "userAdminAnyDatabase", db: "admin" } ] } )
 ```
 
@@ -112,14 +112,14 @@ This user is scoped to the `admin` database to manage MongoDB once authorization
 To initially create a database that doesn't exist simply `use` it. Add a
 new database called `nodebb`:
 
-``` {.sourceCode .}
+``` {.sourceCode}
 > use nodebb
 ```
 
 The database will be created and context switched to `nodebb`. Next
 create the nodebb user and add the appropriate privileges:
 
-``` {.sourceCode .}
+``` {.sourceCode}
 > db.createUser( { user: "nodebb", pwd: "<Enter a secure password>", roles: [ { role: "readWrite", db: "nodebb" }, { role: "clusterMonitor", db: "admin" } ] } )
 ```
 
@@ -130,7 +130,7 @@ exposed in the NodeBB Administrative Control Panel (ACP).
 
 Exit the Mongo Shell:
 
-``` {.sourceCode .}
+``` {.sourceCode}
 > quit()
 ```
 
@@ -206,7 +206,7 @@ Modern linux systems have adopted
 system. Configure nodebb to start via a systemd unit file at the
 location `/lib/systemd/system/nodebb.service`:
 
-``` {.sourceCode .}
+``` {.sourceCode}
 [Unit]
 Description=NodeBB forum
 Documentation=http://nodebb.readthedocs.io/en/latest/
@@ -231,11 +231,9 @@ WantedBy=multi-user.target
 
 **Important**: Replace `/path/to/nodebb` with the correct path to your NodeBB directory. If you followed this guide exactly, then you can `cd $HOME/nodebb && pwd` to see the absolute path to the directory, e.g.:
 
-```
+``` {.sourceCode .bash}
 $ cd $HOME/nodebb && pwd
 /home/myusername/nodebb
-
-$
 ```
 
 Finally, enable and start NodeBB:

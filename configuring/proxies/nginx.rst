@@ -214,3 +214,22 @@ only through internal Nginx redirects.
 
 Restart Nginx ``sudo service nginx restart`` and the next time a user
 visits your forum when it isn't running, they'll see your custom page.
+
+SELinux fix
+-----------
+
+Type as root:
+
+::
+
+   setsebool -P httpd_can_network_connect on
+
+
+This will prevent the "bad gateway" error. Tested on CentOS 7.
+
+You may check the current status of this boolean varialbe with this command:
+
+::
+
+    getsebool -a | grep httpd_can_network_connect
+

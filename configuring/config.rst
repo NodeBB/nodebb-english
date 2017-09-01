@@ -59,3 +59,5 @@ NodeBB:
    from that interface.
    
 - ``sessionKey`` (Default: ``express.sid``) Specifies the session key to use.
+
+- ``cookieDomain`` (defaults to host not including subdomains) Specifies the cookie domain to use.

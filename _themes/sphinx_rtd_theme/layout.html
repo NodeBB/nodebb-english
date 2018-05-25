@@ -73,6 +73,29 @@
   {# Keep modernizr in head - http://modernizr.com/docs/#installing #}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
+  <style type="text/css">
+  .wy-grid-for-nav {
+    margin-top: 150px;
+  }
+  .deprecated {
+    max-width: 800px;
+    background: #f4ffa7;
+    position: fixed;
+    top: 0;
+    right: auto;
+    z-index: 400;
+    min-height: 150px;
+  }
+  .deprecated h2 {
+    color: red;
+    padding: 10px;
+    margin: 0;
+    color: red;
+    padding: 10px;
+    margin: 0;
+  }
+  </style>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -99,6 +122,12 @@
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      
+      <div class="deprecated">
+        <h1>
+          This documentation is deprecated and outdated. Please visit <a href="https://docs.nodebb.org">the official NodeBB docs</a> instead!
+        </h1>
+      </div>
 
       {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
